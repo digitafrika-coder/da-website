@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-low":"#1b1b1f","surface-variant":"#343538","inverse-surface":"#e3e2e6","outline-variant":"#434933","on-secondary-fixed-variant":"#454747","secondary":"#c5c7c7","on-primary":"#273500","surface":"#121316","tertiary-fixed":"#dfe2eb","tertiary-container":"#dfe2eb","secondary-fixed-dim":"#c5c7c7","on-secondary-fixed":"#191c1c","on-tertiary-fixed-variant":"#43474e","on-tertiary-container":"#60646c","background":"#121316","secondary-container":"#47494a","on-tertiary":"#2c3137","on-secondary-container":"#b7b9b9","primary-fixed":"#bef500","on-background":"#e3e2e6","inverse-on-surface":"#303034","error":"#ffb4ab","surface-tint":"#a6d700","primary-container":"#bef500","surface-container-highest":"#343538","outline":"#8d9479","on-error":"#690005","on-error-container":"#ffdad6","on-surface":"#e3e2e6","secondary-fixed":"#e1e3e3","on-primary-container":"#536d00","surface-bright":"#38393c","tertiary-fixed-dim":"#c3c6cf","on-primary-fixed":"#151f00","surface-container-high":"#292a2d","primary-fixed-dim":"#a6d700","surface-dim":"#121316","error-container":"#93000a","primary":"#ffffff","on-tertiary-fixed":"#181c22","surface-container-lowest":"#0d0e11","on-secondary":"#2e3131","inverse-primary":"#4e6700","on-surface-variant":"#c3caac","on-primary-fixed-variant":"#3a4d00","tertiary":"#ffffff","surface-container":"#1f1f23"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","space-xl":"3.5rem","space-2xl":"6rem","margin":"2rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-lg":"2rem","space-md":"1rem","gutter-desktop":"2rem","margin-desktop":"4rem","space-sm":"0.5rem","gutter":"1.5rem"},"fontFamily":{"body-md":["Space Grotesk"],"display-xl-mobile":["Syne"],"display-lg":["Syne"],"body-lg":["Space Grotesk"],"headline-md-mobile":["Space Grotesk"],"display-xl":["Syne"],"body-sm":["Space Grotesk"],"label-lg":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-md":["Space Grotesk"],"display-lg-mobile":["Syne"],"headline-sm":["Space Grotesk"],"headline-lg-mobile":["Syne"],"headline-lg":["Syne"],"label-technical":["Space Grotesk"]},"fontSize":{"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-xl-mobile":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-lg":["68px",{"lineHeight":"72px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-xl":["96px",{"lineHeight":"96px","letterSpacing":"-0.04em","fontWeight":"800"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.06em","fontWeight":"700"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"600"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["44px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-technical":["10px",{"lineHeight":"12px","letterSpacing":"0.18em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="DIGITAFRIKA - LOGO 2026.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UuK95Y4DQVWQC9Z1d-yZPZFujjMHxubiA4lDwCrg5b-nh9JvYY0feUqlHg09BQHxwaZd5rPQStMGMvF9QTg1mPhi8MP5afsm0DNK4IfEMp_64Mii6pLDJbSzYk1BeYHaXy9rAcGQG26u4c0HZzT7coihk8oGw7NiBoDodQGmxksTnvRdtZEVutGt1nHiMHkCOtst_KKrefDKVL80iuKdp87iH6jYc_wG7wEjcAhYsrDZZUZD4G8ZVdNW0g"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface font-bold">DigitAfrika</span><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Agency &amp; Precision Works</span></div></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-3 py-1.5"><span class="h-2 w-2 bg-primary-container rounded-full shadow-[0_0_12px_rgba(198,255,0,0.35)] animate-pulse"></span><span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Maputo [CAT] // 14:30 GMT+2 // Operational</span></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="text-primary-container font-bold"><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="servicos" href="#">Serviços</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfólio</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="grafica-e-serigrafia" href="#">Gráfica &amp; Serigrafia</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="estudio-3d" href="#">Estúdio 3D</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-nos" href="#">Sobre Nós</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="contactos" href="#">Contactos</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase tracking-widest px-6 py-3 transition-colors hover:bg-surface-bright hover:text-on-surface" data-path="contactos" href="#">Pedir Orçamento</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Technical Status Strip -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile md:px-margin lg:px-margin-desktop py-space-sm">
+<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-xs text-on-surface-variant">
+<div class="flex items-center gap-space-sm font-label-technical text-label-technical uppercase tracking-widest">
+<span class="text-primary-container font-bold">// 11</span>
+<span class="text-on-surface font-semibold">ESTÚDIO DE PERSONALIZAÇÃO &amp; MOCKUP BUILDER</span>
+<span class="text-secondary">•</span>
+<span class="text-primary-container">PRODUÇÃO INDUSTRIAL MAPUTO</span>
+</div>
+<div class="flex items-center gap-space-md font-label-technical text-label-technical uppercase">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_12px_rgba(198,255,0,0.35)] animate-pulse"></span>
+<span class="text-on-surface font-medium">MOTOR VECTORIAL 3D V.2.6 ATIVO</span>
+</div>
+<span class="text-secondary-container">|</span>
+<span class="text-on-surface-variant">CALIBRAÇÃO: FOGRA51 / PANTONE SOLID</span>
+</div>
+</div>
+</section>
+<!-- Title & Context Area -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin lg:px-margin-desktop pt-space-lg pb-space-md">
+<div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="space-y-space-xs max-w-4xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container-high text-primary-container font-label-technical text-label-technical uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+          Configurador Paramétrico em Tempo Real
+        </div>
+<h1 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">
+          Estúdio de Personalização Interactivo
+        </h1>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+          Configure o seu produto, teste variantes de cor têxtil e acabamento, posicione a sua marca na malha tridimensional e receba uma cotação técnica calibrada em Moçambique.
+        </p>
+</div>
+<!-- Quick Action / Live Quote Badge -->
+<div class="bg-surface-container-low p-4 flex items-center justify-between sm:justify-start gap-space-lg shadow-md">
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Previsão por Unidade</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold" id="priceUnitDisplay">485,00</span>
+<span class="font-label-technical text-label-technical text-secondary uppercase">MZN + IVA</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Desconto Volume</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="discountBadge">-22% (LOTE 100)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Studio Workspace -->
+<section class="w-full px-margin-mobile md:px-margin lg:px-margin-desktop py-space-md">
+<div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT / CENTER COLUMN: Realistic Mockup Viewport -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<!-- Viewport Toolbar -->
+<div class="bg-surface-container-low p-3 flex flex-wrap items-center justify-between gap-space-xs shadow-sm">
+<!-- Views Switcher -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1" id="viewToggleGroup">
+<button class="px-3 py-1.5 font-label-technical text-label-technical uppercase tracking-wider bg-surface-variant text-on-surface font-bold transition-all" id="viewBtnFront" onclick="setMockupView('front')" type="button">
+              Frente
+            </button>
+<button class="px-3 py-1.5 font-label-technical text-label-technical uppercase tracking-wider text-secondary hover:text-on-surface transition-all" id="viewBtnBack" onclick="setMockupView('back')" type="button">
+              Costas
+            </button>
+<button class="px-3 py-1.5 font-label-technical text-label-technical uppercase tracking-wider text-secondary hover:text-on-surface transition-all" id="viewBtnDetail" onclick="setMockupView('detail')" type="button">
+              Gola &amp; Etiqueta
+            </button>
+</div>
+<!-- Studio Simulation Controls -->
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1">
+<button class="w-7 h-7 flex items-center justify-center text-secondary hover:text-primary-container hover:bg-surface-container transition-colors" onclick="adjustZoom(1)" title="Zoom +" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center text-secondary hover:text-primary-container hover:bg-surface-container transition-colors" onclick="adjustZoom(-1)" title="Zoom -" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center text-secondary hover:text-primary-container hover:bg-surface-container transition-colors" onclick="resetView()" title="Repor Vista" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest text-secondary hover:text-primary-container font-label-technical text-label-technical uppercase transition-colors" id="lightingBtn" onclick="toggleLighting()" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary-container">light_mode</span>
+<span>Luz Studio</span>
+</button>
+</div>
+</div>
+<!-- 3D / Mockup Canvas Arena -->
+<div class="relative w-full aspect-[4/3] md:aspect-[16/11] bg-surface-container-lowest overflow-hidden flex items-center justify-center shadow-xl select-none group" id="canvasViewport">
+<!-- Background Studio Grid Texture -->
+<div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #8d9479 1px, transparent 0); background-size: 24px 24px;"></div>
+<!-- Technical Alignment Crosshairs -->
+<div class="absolute inset-x-0 top-1/2 h-px bg-white/5 pointer-events-none"></div>
+<div class="absolute inset-y-0 left-1/2 w-px bg-white/5 pointer-events-none"></div>
+<!-- Product Base Render / Realistic Model Backdrop -->
+<div class="relative w-full h-full flex items-center justify-center transition-transform duration-300 transform scale-100" id="productRenderWrapper">
+<!-- Simulated Realistic Apparel Base Vector & Silhouette -->
+<div class="relative w-[340px] md:w-[420px] h-[380px] md:h-[460px] flex items-center justify-center transition-colors duration-500 text-[#121212]" id="productSilhouette">
+<!-- SVG T-Shirt / Apparel Base With Natural Drapery & Folds -->
+<svg class="w-full h-full drop-shadow-2xl transition-all duration-300" fill="currentColor" viewbox="0 0 500 550">
+<!-- Main Body -->
+<path d="M 175 40 C 205 75 295 75 325 40 L 450 120 C 475 135 450 195 415 195 L 375 190 L 390 490 C 390 515 370 525 350 525 L 150 525 C 130 525 110 515 110 490 L 125 190 L 85 195 C 50 195 25 135 50 120 Z"></path>
+<!-- Shading and Crease Overlays (Multiply Style Ambient Occlusion) -->
+<path d="M 175 40 C 210 65 290 65 325 40 C 300 80 200 80 175 40 Z" fill="#000000" fill-opacity="0.35"></path>
+<path d="M 125 190 L 150 525 L 140 525 L 115 190 Z" fill="#000000" fill-opacity="0.18"></path>
+<path d="M 375 190 L 350 525 L 360 525 L 385 190 Z" fill="#ffffff" fill-opacity="0.08"></path>
+<path d="M 230 110 Q 250 170 235 240 Q 250 350 245 490" fill="none" stroke="#000000" stroke-opacity="0.15" stroke-width="2"></path>
+<path d="M 270 120 Q 260 210 275 310 Q 265 420 270 490" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5"></path>
+</svg>
+<!-- Printable Bounding Box Overlay -->
+<div class="absolute w-[210px] md:w-[250px] h-[280px] md:h-[330px] top-[105px] md:top-[115px] flex flex-col items-center justify-start pointer-events-auto" id="printBoundary">
+<!-- Bounding Box Frame Indicator -->
+<div class="absolute inset-0 bg-primary-container/[0.03] outline outline-1 outline-dashed outline-primary-container/40 pointer-events-none">
+<div class="absolute top-1 left-1 font-label-technical text-[9px] uppercase tracking-widest text-primary-container/80 px-1 py-0.5 bg-surface-container-lowest/80">
+                    Área Útil A3 // 297×420mm
+                  </div>
+<div class="absolute bottom-1 right-1 font-label-technical text-[8px] uppercase tracking-widest text-secondary/60">
+                    Centro Óptico [CAT]
+                  </div>
+</div>
+<!-- Live Dynamic Customisation Layer (Draggable & Interactive Element) -->
+<div class="relative mt-12 px-4 py-3 bg-surface-container-high/90 shadow-2xl cursor-move select-none flex flex-col items-center justify-center transition-transform hover:shadow-primary-container/20 group/art" id="artLayer">
+<!-- Control handles -->
+<div class="absolute -top-2 -left-2 w-4 h-4 bg-primary-container text-on-primary-container flex items-center justify-center text-[10px] font-bold">
+                    ↖
+                  </div>
+<div class="absolute -top-2 -right-2 w-4 h-4 bg-surface-bright text-on-surface hover:bg-error hover:text-on-error flex items-center justify-center text-[10px] cursor-pointer" onclick="resetArtLayer(event)" title="Limpar / Repor">
+                    ✕
+                  </div>
+<div class="absolute -bottom-2 -right-2 w-4 h-4 bg-primary-container text-on-primary-container flex items-center justify-center text-[10px] font-bold">
+                    ↘
+                  </div>
+<!-- Dynamic Artwork Content -->
+<div class="flex flex-col items-center text-center" id="artContent">
+<span class="font-display-lg text-[22px] md:text-[26px] leading-none uppercase font-extrabold tracking-tight text-primary-container" id="artHeading">
+                      DIGITAFRIKA
+                    </span>
+<span class="font-label-technical text-[10px] uppercase tracking-[0.25em] text-on-surface mt-1" id="artSubheading">
+                      MAPUTO CREATIVE HUB // 2026
+                    </span>
+<div class="hidden mt-2 max-w-[120px] max-h-[70px] overflow-hidden" id="customUploadedPreview">
+<img class="w-full h-full object-contain" data-alt="Logotipo vectorial da marca do cliente carregado no estúdio de personalização da DigitAfrika Maputo com linhas de corte precisas em fundo transparente" id="clientLogoImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA169LhvTnBRCSzmYH8t2RAHf0ecEO965kBWa_5eJvkj5cgLraZkXt7lEMfrleWa35MjgchyJKRwIj_xHbFpZ8_bYrC06TF6Cn2jyVqRmYnGxKg0g5TXOAtFKxsLUaMCs69gsYDDxuTsqTh9PJzxL0HhGwroJzjKdP9pCmvIcNTPZStkOpRLr1vvEVOVHSeZ_RwLaMSBrmqdj-LmGT9RFgJAwddGPXNUusNuowtWKMe"/>
+</div>
+</div>
+<!-- Alignment Guideline Dot -->
+<div class="absolute -bottom-5 text-center font-label-technical text-[8px] text-primary-container uppercase tracking-wider opacity-0 group-hover/art:opacity-100 transition-opacity">
+                    Posição: X: 0mm / Y: +42mm
+                  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Viewport Production Safeguard Watermark -->
+<div class="absolute bottom-3 inset-x-3 bg-surface-container-high/90 p-2.5 flex items-center justify-between gap-space-sm backdrop-blur-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-container">verified_user</span>
+<p class="font-label-technical text-label-technical text-secondary uppercase tracking-tight">
+                PRÉ-VISUALIZAÇÃO DE CONCEITO // A ARTE FINAL SERÁ CALIBRADA EM VECTOR (AI / PDF / EPS) PELA EQUIPA TÉCNICA
+              </p>
+</div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase font-bold shrink-0 hidden sm:inline">
+              100% REPRODUÇÃO FIEL
+            </span>
+</div>
+</div>
+<!-- Specifications & Live Attributes Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<div class="bg-surface-container-low p-3 flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Substrato Base</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate" id="specSubstrate">Algodão Heavy 220g</span>
+</div>
+<div class="bg-surface-container-low p-3 flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Tonalidade Selecionada</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-3 h-3 bg-[#121212] inline-block shadow-sm" id="specColorDot"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate" id="specColorName">Preto Obsidiana</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Processo de Impressão</span>
+<span class="font-label-lg text-label-lg text-primary-container font-semibold truncate" id="specPrintTech">Serigrafia Plastisol</span>
+</div>
+<div class="bg-surface-container-low p-3 flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Local de Produção</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Maputo [Oficina Central]</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Control Panel & Configuration Engine -->
+<div class="lg:col-span-5 flex flex-col bg-surface-container-low shadow-xl">
+<!-- Tabbed Navigation Ribbon -->
+<div class="grid grid-cols-3 bg-surface-container-lowest text-center select-none" id="studioTabsNav">
+<button class="py-3.5 px-2 font-label-lg text-label-lg uppercase tracking-wider text-primary-container bg-surface-container-low font-bold transition-all flex items-center justify-center gap-1.5" id="navTabProduct" onclick="switchStudioTab('tab-product')" type="button">
+<span class="material-symbols-outlined text-[16px]">checkroom</span>
+<span class="hidden sm:inline">1. Modelo</span>
+<span class="sm:hidden">1</span>
+</button>
+<button class="py-3.5 px-2 font-label-lg text-label-lg uppercase tracking-wider text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5" id="navTabEditor" onclick="switchStudioTab('tab-editor')" type="button">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span class="hidden sm:inline">2. Arte</span>
+<span class="sm:hidden">2</span>
+</button>
+<button class="py-3.5 px-2 font-label-lg text-label-lg uppercase tracking-wider text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5" id="navTabQuote" onclick="switchStudioTab('tab-quote')" type="button">
+<span class="material-symbols-outlined text-[16px]">request_quote</span>
+<span class="hidden sm:inline">3. Cotação</span>
+<span class="sm:hidden">3</span>
+</button>
+</div>
+<!-- TAB CONTENT CONTAINER -->
+<div class="p-space-md sm:p-space-lg flex-1 flex flex-col justify-between">
+<!-- ================= TAB 1: PRODUCT & MODEL ================= -->
+<div class="flex flex-col gap-space-lg" id="tab-product">
+<!-- Category Selector Matrix -->
+<div class="space-y-space-xs">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                Seleccione a Linha de Produto
+              </label>
+<div class="grid grid-cols-3 gap-2">
+<button class="category-btn p-2.5 bg-surface-container-high text-primary-container font-semibold flex flex-col items-center gap-1 text-center transition-all" onclick="selectProductCategory('Camisetas', 485, 'Algodão Heavy 220g')" type="button">
+<span class="material-symbols-outlined text-[20px]">apparel</span>
+<span class="font-label-technical text-label-technical uppercase">Camisetas</span>
+</button>
+<button class="category-btn p-2.5 bg-surface-container-lowest text-secondary hover:text-on-surface flex flex-col items-center gap-1 text-center transition-all" onclick="selectProductCategory('Polos', 690, 'Piqué Algodão 240g')" type="button">
+<span class="material-symbols-outlined text-[20px]">styler</span>
+<span class="font-label-technical text-label-technical uppercase">Polos</span>
+</button>
+<button class="category-btn p-2.5 bg-surface-container-lowest text-secondary hover:text-on-surface flex flex-col items-center gap-1 text-center transition-all" onclick="selectProductCategory('Sweatshirts', 1250, 'Moletom Cardado 320g')" type="button">
+<span class="material-symbols-outlined text-[20px]">dry_cleaning</span>
+<span class="font-label-technical text-label-technical uppercase">Sweatshirts</span>
+</button>
+<button class="category-btn p-2.5 bg-surface-container-lowest text-secondary hover:text-on-surface flex flex-col items-center gap-1 text-center transition-all" onclick="selectProductCategory('Bonés', 380, 'Sarja Estruturada 6 Painéis')" type="button">
+<span class="material-symbols-outlined text-[20px]">sports_baseball</span>
+<span class="font-label-technical text-label-technical uppercase">Bonés</span>
+</button>
+<button class="category-btn p-2.5 bg-surface-container-lowest text-secondary hover:text-on-surface flex flex-col items-center gap-1 text-center transition-all" onclick="selectProductCategory('Canecas', 290, 'Cerâmica Premium Sublimada')" type="button">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+<span class="font-label-technical text-label-technical uppercase">Canecas</span>
+</button>
+<button class="category-btn p-2.5 bg-surface-container-lowest text-secondary hover:text-on-surface flex flex-col items-center gap-1 text-center transition-all" onclick="selectProductCategory('Sacolas / Totes', 340, 'Lona Crua Reforçada 300g')" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="font-label-technical text-label-technical uppercase">Sacolas</span>
+</button>
+</div>
+</div>
+<!-- Material & Fabric Weight -->
+<div class="space-y-space-xs">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                Gramagem &amp; Especificação do Têxtil
+              </label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-3 bg-surface-container-high cursor-pointer">
+<div class="flex items-center gap-3">
+<input checked="" class="accent-primary-container w-4 h-4" name="fabricOption" onchange="updateSubstrateSpec(this.value)" type="radio" value="Algodão Heavy 220g"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Algodão Penteado Heavyweight 220g</span>
+<span class="font-body-sm text-body-sm text-secondary">Toque encorpado, estrutura premium e alta durabilidade</span>
+</div>
+</div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-wider">Padrão Agency</span>
+</label>
+<label class="flex items-center justify-between p-3 bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high/60 transition-colors">
+<div class="flex items-center gap-3">
+<input class="accent-primary-container w-4 h-4" name="fabricOption" onchange="updateSubstrateSpec(this.value)" type="radio" value="Têxtil Orgânico 180g"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Têxtil Orgânico Sustentável 180g</span>
+<span class="font-body-sm text-body-sm text-secondary">Toque sedoso, algodão biológico com certificação OEKO-TEX</span>
+</div>
+</div>
+<span class="font-label-technical text-label-technical text-secondary uppercase tracking-wider">+45 MZN</span>
+</label>
+<label class="flex items-center justify-between p-3 bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high/60 transition-colors">
+<div class="flex items-center gap-3">
+<input class="accent-primary-container w-4 h-4" name="fabricOption" onchange="updateSubstrateSpec(this.value)" type="radio" value="Tech Dry-Fit Performance"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Tech Dry-Fit Performance</span>
+<span class="font-body-sm text-body-sm text-secondary">Microfibra transpirável de secagem ultrarrápida para eventos</span>
+</div>
+</div>
+<span class="font-label-technical text-label-technical text-secondary uppercase tracking-wider">+15 MZN</span>
+</label>
+</div>
+</div>
+<!-- Color Palette Selector -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                  Cor do Tecido / Substrato
+                </label>
+<span class="font-label-technical text-label-technical text-primary-container font-mono" id="activeColorCode">#121212 [OBSIDIANA]</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest">
+<button class="color-swatch w-9 h-9 bg-[#121212] shadow-md ring-2 ring-primary-container flex items-center justify-center transition-all" onclick="setProductColor('#121212', 'Preto Obsidiana', '#121212')" title="Preto Obsidiana" type="button">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+</button>
+<button class="color-swatch w-9 h-9 bg-[#FFFFFF] shadow-md flex items-center justify-center transition-all" onclick="setProductColor('#FFFFFF', 'Branco Puro', '#FFFFFF')" title="Branco Puro" type="button"></button>
+<button class="color-swatch w-9 h-9 bg-primary-container shadow-md flex items-center justify-center transition-all" onclick="setProductColor('#bef500', 'Verde Neon DigitAfrika', '#bef500')" title="Neon DigitAfrika" type="button"></button>
+<button class="color-swatch w-9 h-9 bg-[#2C2D30] shadow-md flex items-center justify-center transition-all" onclick="setProductColor('#2C2D30', 'Cinzento Chumbo', '#2C2D30')" title="Cinzento Chumbo" type="button"></button>
+<button class="color-swatch w-9 h-9 bg-[#141B2D] shadow-md flex items-center justify-center transition-all" onclick="setProductColor('#141B2D', 'Azul Marinho Corporativo', '#141B2D')" title="Azul Marinho Corporativo" type="button"></button>
+</div>
+</div>
+<!-- Sizes Grid (CAT standard sizing) -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                  Distribuição de Tamanhos [CAT - Maputo]
+                </label>
+<span class="font-label-technical text-label-technical text-secondary uppercase">Guia Regular Unisex</span>
+</div>
+<div class="grid grid-cols-6 gap-2">
+<div class="bg-surface-container-lowest p-2 flex flex-col items-center">
+<span class="font-label-technical text-label-technical text-secondary mb-1">S</span>
+<input class="w-full bg-surface-container-high text-center font-label-lg text-label-lg text-on-surface py-1 focus:outline-primary-container" min="0" type="number" value="15"/>
+</div>
+<div class="bg-surface-container-lowest p-2 flex flex-col items-center">
+<span class="font-label-technical text-label-technical text-secondary mb-1">M</span>
+<input class="w-full bg-surface-container-high text-center font-label-lg text-label-lg text-on-surface py-1 focus:outline-primary-container" min="0" type="number" value="35"/>
+</div>
+<div class="bg-surface-container-lowest p-2 flex flex-col items-center">
+<span class="font-label-technical text-label-technical text-secondary mb-1">L</span>
+<input class="w-full bg-surface-container-high text-center font-label-lg text-label-lg text-on-surface py-1 focus:outline-primary-container" min="0" type="number" value="30"/>
+</div>
+<div class="bg-surface-container-lowest p-2 flex flex-col items-center">
+<span class="font-label-technical text-label-technical text-secondary mb-1">XL</span>
+<input class="w-full bg-surface-container-high text-center font-label-lg text-label-lg text-on-surface py-1 focus:outline-primary-container" min="0" type="number" value="15"/>
+</div>
+<div class="bg-surface-container-lowest p-2 flex flex-col items-center">
+<span class="font-label-technical text-label-technical text-secondary mb-1">2XL</span>
+<input class="w-full bg-surface-container-high text-center font-label-lg text-label-lg text-on-surface py-1 focus:outline-primary-container" min="0" type="number" value="5"/>
+</div>
+<div class="bg-surface-container-lowest p-2 flex flex-col items-center">
+<span class="font-label-technical text-label-technical text-secondary mb-1">3XL</span>
+<input class="w-full bg-surface-container-high text-center font-label-lg text-label-lg text-on-surface py-1 focus:outline-primary-container" min="0" type="number" value="0"/>
+</div>
+</div>
+</div>
+<!-- Print Techniques Options -->
+<div class="space-y-space-xs">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                Técnica de Gravação / Impressão Industrial
+              </label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<button class="tech-btn p-3 bg-surface-container-high text-primary-container text-left flex items-start gap-2.5 transition-all" onclick="setPrintTech('Serigrafia Plastisol Alta Densidade')" type="button">
+<span class="material-symbols-outlined text-[18px] mt-0.5">opacity</span>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical uppercase font-bold">Serigrafia Plastisol</span>
+<span class="font-body-sm text-body-sm text-secondary">Máxima vivacidade e durabilidade</span>
+</div>
+</button>
+<button class="tech-btn p-3 bg-surface-container-lowest text-secondary hover:text-on-surface text-left flex items-start gap-2.5 transition-all" onclick="setPrintTech('Serigrafia Ecológica Discharge')" type="button">
+<span class="material-symbols-outlined text-[18px] mt-0.5">eco</span>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical uppercase font-bold">Serigrafia Discharge</span>
+<span class="font-body-sm text-body-sm text-secondary">Zero toque na fibra escura</span>
+</div>
+</button>
+<button class="tech-btn p-3 bg-surface-container-lowest text-secondary hover:text-on-surface text-left flex items-start gap-2.5 transition-all" onclick="setPrintTech('Impressão Digital Directa (DTG)')" type="button">
+<span class="material-symbols-outlined text-[18px] mt-0.5">print</span>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical uppercase font-bold">Digital Directa DTG</span>
+<span class="font-body-sm text-body-sm text-secondary">Gradientes e fotos em alta definição</span>
+</div>
+</button>
+<button class="tech-btn p-3 bg-surface-container-lowest text-secondary hover:text-on-surface text-left flex items-start gap-2.5 transition-all" onclick="setPrintTech('Bordado Computadorizado 3D')" type="button">
+<span class="material-symbols-outlined text-[18px] mt-0.5">texture</span>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical uppercase font-bold">Bordado Industrial 3D</span>
+<span class="font-body-sm text-body-sm text-secondary">Relevo de alta costura em fios Madeira</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Advance Tab Button -->
+<button class="w-full py-3.5 bg-surface-container-high text-on-surface hover:text-primary-container font-label-lg text-label-lg uppercase tracking-widest flex items-center justify-center gap-2 transition-colors mt-2" onclick="switchStudioTab('tab-editor')" type="button">
+<span>Avançar para Personalização de Arte</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- ================= TAB 2: VISUAL EDITOR ================= -->
+<div class="hidden flex-col gap-space-lg" id="tab-editor">
+<!-- Upload Asset Box -->
+<div class="space-y-space-xs">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                Ficheiro Vectorial ou Imagem de Marca
+              </label>
+<div class="p-6 bg-surface-container-lowest text-center flex flex-col items-center justify-center gap-3 relative cursor-pointer hover:bg-surface-container-high/40 transition-colors">
+<input accept=".png,.svg,.ai,.pdf" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" id="logoFileInput" onchange="handleFileUpload(event)" type="file"/>
+<div class="w-12 h-12 bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-lg text-label-lg uppercase text-on-surface font-semibold">Carregar Logótipo / Arte do Cliente</span>
+<span class="font-body-sm text-body-sm text-secondary">Formatos aceites: .SVG, .PNG (fundo transparente), .AI ou .PDF</span>
+</div>
+<div class="px-2 py-1 bg-surface-container-high font-label-technical text-[10px] text-primary-container uppercase tracking-wider">
+                  Resolução Mínima Recomendada: 300 DPI
+                </div>
+</div>
+</div>
+<!-- Text & Signature Input Generator -->
+<div class="space-y-space-xs">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                Adicionar Tipografia / Assinatura de Marca
+              </label>
+<div class="space-y-3">
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Título Primário</span>
+<input class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container" id="inputHeadingText" oninput="updateArtText()" placeholder="Ex: NOME DA EMPRESA" type="text" value="DIGITAFRIKA"/>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Subtítulo / Tagline</span>
+<input class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container" id="inputSubheadingText" oninput="updateArtText()" placeholder="Ex: DIVISÃO INDUSTRIAL // 2026" type="text" value="MAPUTO CREATIVE HUB // 2026"/>
+</div>
+<!-- Font Family Selection -->
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Família Tipográfica</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="font-selector-btn p-2 bg-surface-container-high text-primary-container font-label-technical text-label-technical uppercase transition-all" onclick="setArtFont('font-display-lg')" type="button">
+                      Syne [Editorial Avant-Garde]
+                    </button>
+<button class="font-selector-btn p-2 bg-surface-container-lowest text-secondary hover:text-on-surface font-label-technical text-label-technical uppercase transition-all" onclick="setArtFont('font-body-lg')" type="button">
+                      Space Grotesk [Modernist]
+                    </button>
+</div>
+</div>
+<!-- Ink Color Swatches for Artwork -->
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Tinta de Estampa Principal</span>
+<div class="flex items-center gap-2 p-2 bg-surface-container-lowest">
+<button class="w-7 h-7 bg-primary-container shadow-sm" onclick="setArtColor('#bef500')" title="Lime" type="button"></button>
+<button class="w-7 h-7 bg-white shadow-sm" onclick="setArtColor('#ffffff')" title="Branco" type="button"></button>
+<button class="w-7 h-7 bg-black shadow-sm" onclick="setArtColor('#000000')" title="Preto" type="button"></button>
+<button class="w-7 h-7 bg-[#ff334b] shadow-sm" onclick="setArtColor('#ff334b')" title="Vermelho Magenta" type="button"></button>
+<button class="w-7 h-7 bg-[#00f0ff] shadow-sm" onclick="setArtColor('#00f0ff')" title="Azul Ciano" type="button"></button>
+<span class="font-label-technical text-label-technical text-secondary ml-auto uppercase tracking-tight">Cores Pantone Diretas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Layer Operations Controls -->
+<div class="space-y-space-xs">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                Controlos de Camada &amp; Transformação
+              </label>
+<div class="grid grid-cols-4 gap-2">
+<button class="p-2.5 bg-surface-container-lowest text-secondary hover:text-primary-container font-label-technical text-[10px] uppercase flex flex-col items-center gap-1 transition-colors" onclick="alignArtCenter()" type="button">
+<span class="material-symbols-outlined text-[18px]">vertical_align_center</span>
+                  Centrar
+                </button>
+<button class="p-2.5 bg-surface-container-lowest text-secondary hover:text-primary-container font-label-technical text-[10px] uppercase flex flex-col items-center gap-1 transition-colors" onclick="scaleArt(1.1)" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_out_map</span>
+                  Aumentar
+                </button>
+<button class="p-2.5 bg-surface-container-lowest text-secondary hover:text-primary-container font-label-technical text-[10px] uppercase flex flex-col items-center gap-1 transition-colors" onclick="scaleArt(0.9)" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in_map</span>
+                  Reduzir
+                </button>
+<button class="p-2.5 bg-surface-container-lowest text-secondary hover:text-error font-label-technical text-[10px] uppercase flex flex-col items-center gap-1 transition-colors" onclick="resetArtTransform()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+                  Repor
+                </button>
+</div>
+</div>
+<!-- Advance Tab Button -->
+<button class="w-full py-3.5 bg-surface-container-high text-on-surface hover:text-primary-container font-label-lg text-label-lg uppercase tracking-widest flex items-center justify-center gap-2 transition-colors mt-2" onclick="switchStudioTab('tab-quote')" type="button">
+<span>Finalizar &amp; Solicitar Cotação</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- ================= TAB 3: QUOTE REQUEST ================= -->
+<div class="hidden flex-col gap-space-lg" id="tab-quote">
+<!-- Quantity Tier Engine -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest block">
+                  Volume de Produção Pretendido
+                </label>
+<span class="font-label-technical text-label-technical text-primary-container uppercase font-bold" id="tierInfoText">100 Unidades // Desconto de Lote</span>
+</div>
+<div class="bg-surface-container-lowest p-4 space-y-3">
+<div class="flex items-center gap-4">
+<input class="w-full accent-primary-container cursor-pointer" id="quantityRange" max="1000" min="25" oninput="updateQuantityCalc(this.value)" step="25" type="range" value="100"/>
+<div class="w-24 shrink-0 bg-surface-container-high px-3 py-1.5 text-center font-headline-sm text-headline-sm text-primary-container font-bold">
+<span id="quantityNumberDisplay">100</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-1 text-center font-label-technical text-[9px] text-secondary uppercase">
+<span>25-49 [Base]</span>
+<span>50-99 [-12%]</span>
+<span class="text-primary-container font-bold">100-249 [-22%]</span>
+<span>250+ [-35%]</span>
+</div>
+</div>
+</div>
+<!-- Customer Details Form -->
+<form class="space-y-space-sm" id="quoteRequestForm" onsubmit="handleQuoteSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Nome Completo *</span>
+<input class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Ex: Arnaldo Mondlane" required="" type="text"/>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Empresa / Organização</span>
+<input class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Ex: Moza Creatives Lda." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Email Corporativo *</span>
+<input class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="contacto@empresa.co.mz" required="" type="email"/>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Contacto WhatsApp (+258) *</span>
+<input class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="+258 84 / 85 000 0000" required="" type="tel"/>
+</div>
+</div>
+<!-- Production Urgency / Timetable -->
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Prazo de Entrega Solicitado</span>
+<div class="grid grid-cols-2 gap-2">
+<label class="p-3 bg-surface-container-high cursor-pointer flex items-center gap-2">
+<input checked="" class="accent-primary-container" name="leadTime" type="radio" value="regular"/>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface uppercase font-bold">Normal: 5 a 7 Dias Úteis</span>
+<span class="font-body-sm text-body-sm text-secondary">Sem taxa de urgência gráfica</span>
+</div>
+</label>
+<label class="p-3 bg-surface-container-lowest cursor-pointer flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<input class="accent-primary-container" name="leadTime" type="radio" value="rush"/>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical text-on-surface uppercase font-bold">Urgente: 48h a 72h</span>
+<span class="font-body-sm text-body-sm text-primary-container">Linha expressa prioritária</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Technical Notes & Logistics -->
+<div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-1">Notas de Produção &amp; Especificações Adicionais</span>
+<textarea class="w-full bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-secondary-container focus:outline-none focus:ring-1 focus:ring-primary-container resize-none" placeholder="Indique requisitos específicos: códigos Pantone exactos, ensacamento individual, entrega em províncias (Beira, Nampula, Tete) ou etiquetagem personalizada..." rows="3"></textarea>
+</div>
+<!-- SLA Guarantee Box -->
+<div class="p-3 bg-surface-container-lowest flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[20px]">electric_bolt</span>
+<div class="font-label-technical text-label-technical text-secondary uppercase">
+                  Resposta garantida em menos de <span class="text-on-surface font-bold">24 horas úteis</span> por engenheiro de impressão sénior em Maputo.
+                </div>
+</div>
+<!-- Big Kinetic Neon Button -->
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase tracking-widest font-extrabold flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all shadow-[0_0_20px_rgba(198,255,0,0.25)]" type="submit">
+<span>Solicitar Orçamento Técnico</span>
+<span class="material-symbols-outlined text-[20px]">arrow_outward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Submission Success Confirmation Modal / Sheet -->
+<div class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4" id="quoteSuccessModal">
+<div class="bg-surface-container-low max-w-xl w-full p-space-lg shadow-2xl relative">
+<button class="absolute top-4 right-4 text-secondary hover:text-on-surface" onclick="closeQuoteModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<div class="flex flex-col items-center text-center space-y-space-md">
+<!-- Neon Status Ping -->
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center text-primary-container shadow-[0_0_24px_rgba(198,255,0,0.35)]">
+<span class="material-symbols-outlined text-[36px]">check_circle</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">
+            Protocolo Técnico Registado // Maputo Hub
+          </span>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface font-bold">
+            Pedido de Orçamento Recebido
+          </h2>
+<div class="font-label-technical text-label-technical text-secondary uppercase font-mono px-3 py-1 bg-surface-container-lowest inline-block">
+            Ref: #DA-EST-2026-084
+          </div>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-md">
+          A equipa de engenharia de pré-impressão da DigitAfrika irá analisar a geometria da sua arte, verificar a calibração de cor em escala Pantone e enviar a proposta comercial detalhada para o seu e-mail e WhatsApp em menos de 24 horas úteis.
+        </p>
+<!-- Technical Summary Digest -->
+<div class="w-full bg-surface-container-lowest p-4 text-left grid grid-cols-2 gap-2 font-label-technical text-label-technical uppercase">
+<div class="text-on-surface-variant">Lote Previsto:</div>
+<div class="text-on-surface font-bold text-right" id="modalQuantityDigest">100 Unidades</div>
+<div class="text-on-surface-variant">Linha &amp; Técnica:</div>
+<div class="text-on-surface font-bold text-right truncate" id="modalProductDigest">Camisetas // Serigrafia</div>
+<div class="text-on-surface-variant">Atendimento:</div>
+<div class="text-primary-container font-bold text-right">Polana Cimento, Maputo</div>
+</div>
+<!-- Action Options -->
+<div class="w-full flex flex-col sm:flex-row gap-space-sm pt-space-xs">
+<button class="flex-1 py-3 bg-surface-container-high text-on-surface hover:text-primary-container font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 transition-colors" onclick="downloadSpecSummary()" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descarregar Ficha (PDF)</span>
+</button>
+<button class="flex-1 py-3 bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors" onclick="closeQuoteModal()" type="button">
+            Nova Personalização
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Industrial Studio Footprint & Technical Specifications Grid -->
+<section class="w-full px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl bg-surface-container-low mt-space-lg">
+<div class="max-w-[1600px] mx-auto">
+<div class="mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-1">
+          // CRITÉRIOS DE FABRICO DE ALTA FIDELIDADE
+        </span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface font-bold">
+          Normas de Produção da Oficina Técnica DigitAfrika
+        </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Standard 1 -->
+<div class="bg-surface-container-lowest p-6 space-y-space-xs shadow-md">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">palette</span>
+<span class="font-label-lg text-label-lg uppercase font-bold">Colorimetria &amp; Tintas</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+            Todas as artes fornecidas em RGB são calibradas para perfis industriais CMYK e escalas Pantone Solid Coated. As tintas plastisol são curadas em estufa a 160°C para garantia de resistência a 80+ lavagens.
+          </p>
+<div class="font-label-technical text-label-technical text-on-surface-variant uppercase pt-2">
+            Tolerância Cromática: Delta E &lt; 1.5
+          </div>
+</div>
+<!-- Standard 2 -->
+<div class="bg-surface-container-lowest p-6 space-y-space-xs shadow-md">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">square_foot</span>
+<span class="font-label-lg text-label-lg uppercase font-bold">Áreas Úteis &amp; Resolução</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+            Impressões até formato A3 estendido (320 × 450 mm). Vetorização assistida gratuita para elementos complexos submetidos em baixa resolução e fornecimento de prova digital em mockup 3D antes da tiragem física.
+          </p>
+<div class="font-label-technical text-label-technical text-on-surface-variant uppercase pt-2">
+            Matrizes: 77T / 120T Fios de Poliéster
+          </div>
+</div>
+<!-- Standard 3 -->
+<div class="bg-surface-container-lowest p-6 space-y-space-xs shadow-md">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+<span class="font-label-lg text-label-lg uppercase font-bold">Logística &amp; Cobertura Nacional</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+            Expedição diária a partir do Hub Polana Cimento, Maputo. Envio expresso para todas as províncias de Moçambique com embalamento a vácuo, etiquetagem por tamanho e controlo rigoroso de qualidade peça a peça.
+          </p>
+<div class="font-label-technical text-label-technical text-on-surface-variant uppercase pt-2">
+            Hub: Av. Julius Nyerere, Maputo
+          </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // State Engine
+  const studioState = {
+    category: 'Camisetas',
+    basePrice: 485,
+    quantity: 100,
+    fabric: 'Algodão Heavy 220g',
+    colorName: 'Preto Obsidiana',
+    colorHex: '#121212',
+    printTech: 'Serigrafia Plastisol Alta Densidade',
+    view: 'front',
+    zoom: 1,
+    artScale: 1,
+    lightingMode: 'studio',
+    textHeading: 'DIGITAFRIKA',
+    textSubheading: 'MAPUTO CREATIVE HUB // 2026'
+  };
+
+  // Tab Switcher
+  function switchStudioTab(tabId) {
+    const tabs = ['tab-product', 'tab-editor', 'tab-quote'];
+    const navs = {
+      'tab-product': 'navTabProduct',
+      'tab-editor': 'navTabEditor',
+      'tab-quote': 'navTabQuote'
+    };
+
+    tabs.forEach(id => {
+      const el = document.getElementById(id);
+      const navBtn = document.getElementById(navs[id]);
+      if (id === tabId) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+        navBtn.classList.remove('text-secondary', 'bg-surface-container-lowest');
+        navBtn.classList.add('text-primary-container', 'bg-surface-container-low', 'font-bold');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+        navBtn.classList.add('text-secondary', 'bg-surface-container-lowest');
+        navBtn.classList.remove('text-primary-container', 'bg-surface-container-low', 'font-bold');
+      }
+    });
+  }
+
+  // Category Selection
+  function selectProductCategory(name, price, defaultFabric) {
+    studioState.category = name;
+    studioState.basePrice = price;
+    studioState.fabric = defaultFabric;
+    document.getElementById('specSubstrate').innerText = defaultFabric;
+
+    // Highlight Buttons
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.classList.remove('bg-surface-container-high', 'text-primary-container');
+      btn.classList.add('bg-surface-container-lowest', 'text-secondary');
+    });
+    event.currentTarget.classList.remove('bg-surface-container-lowest', 'text-secondary');
+    event.currentTarget.classList.add('bg-surface-container-high', 'text-primary-container');
+
+    calculatePricing();
+  }
+
+  // Fabric Weight Update
+  function updateSubstrateSpec(fabricName) {
+    studioState.fabric = fabricName;
+    document.getElementById('specSubstrate').innerText = fabricName;
+  }
+
+  // Color Swatch Selection
+  function setProductColor(hex, name, dotColor) {
+    studioState.colorHex = hex;
+    studioState.colorName = name;
+    
+    // Update Silhouette Visual
+    const sil = document.getElementById('productSilhouette');
+    sil.style.color = hex;
+
+    // Update Specs Display
+    document.getElementById('specColorDot').style.backgroundColor = dotColor;
+    document.getElementById('specColorName').innerText = name;
+    document.getElementById('activeColorCode').innerText = hex + ' [' + name.toUpperCase() + ']';
+
+    // Highlight swatch ring
+    document.querySelectorAll('.color-swatch').forEach(btn => {
+      btn.classList.remove('ring-2', 'ring-primary-container');
+    });
+    event.currentTarget.classList.add('ring-2', 'ring-primary-container');
+  }
+
+  // Print Technique Selection
+  function setPrintTech(techName) {
+    studioState.printTech = techName;
+    document.getElementById('specPrintTech').innerText = techName.split(' ')[0] + ' ' + (techName.split(' ')[1] || '');
+
+    document.querySelectorAll('.tech-btn').forEach(btn => {
+      btn.classList.remove('bg-surface-container-high', 'text-primary-container');
+      btn.classList.add('bg-surface-container-lowest', 'text-secondary');
+    });
+    event.currentTarget.classList.remove('bg-surface-container-lowest', 'text-secondary');
+    event.currentTarget.classList.add('bg-surface-container-high', 'text-primary-container');
+  }
+
+  // View Switcher (Front, Back, Detail)
+  function setMockupView(viewType) {
+    studioState.view = viewType;
+    const btnF = document.getElementById('viewBtnFront');
+    const btnB = document.getElementById('viewBtnBack');
+    const btnD = document.getElementById('viewBtnDetail');
+    const art = document.getElementById('artLayer');
+
+    [btnF, btnB, btnD].forEach(b => {
+      b.classList.remove('bg-surface-variant', 'text-on-surface', 'font-bold');
+      b.classList.add('text-secondary');
+    });
+
+    if (viewType === 'front') {
+      btnF.classList.add('bg-surface-variant', 'text-on-surface', 'font-bold');
+      btnF.classList.remove('text-secondary');
+      art.style.opacity = '1';
+    } else if (viewType === 'back') {
+      btnB.classList.add('bg-surface-variant', 'text-on-surface', 'font-bold');
+      btnB.classList.remove('text-secondary');
+      art.style.opacity = '0.9';
+    } else {
+      btnD.classList.add('bg-surface-variant', 'text-on-surface', 'font-bold');
+      btnD.classList.remove('text-secondary');
+      art.style.opacity = '0.3';
+    }
+  }
+
+  // Zoom Controls
+  function adjustZoom(delta) {
+    if (delta > 0 && studioState.zoom < 1.4) {
+      studioState.zoom += 0.15;
+    } else if (delta < 0 && studioState.zoom > 0.8) {
+      studioState.zoom -= 0.15;
+    }
+    document.getElementById('productRenderWrapper').style.transform = `scale(${studioState.zoom})`;
+  }
+
+  function resetView() {
+    studioState.zoom = 1;
+    document.getElementById('productRenderWrapper').style.transform = 'scale(1)';
+  }
+
+  // Lighting Toggle
+  function toggleLighting() {
+    const canvas = document.getElementById('canvasViewport');
+    const btn = document.getElementById('lightingBtn');
+    if (studioState.lightingMode === 'studio') {
+      studioState.lightingMode = 'dramatic';
+      canvas.classList.add('contrast-125', 'brightness-90');
+      btn.classList.add('text-primary-container');
+    } else {
+      studioState.lightingMode = 'studio';
+      canvas.classList.remove('contrast-125', 'brightness-90');
+      btn.classList.remove('text-primary-container');
+    }
+  }
+
+  // Artwork Text Updates
+  function updateArtText() {
+    const headingVal = document.getElementById('inputHeadingText').value;
+    const subVal = document.getElementById('inputSubheadingText').value;
+    document.getElementById('artHeading').innerText = headingVal || 'DIGITAFRIKA';
+    document.getElementById('artSubheading').innerText = subVal || 'MAPUTO CREATIVE HUB';
+  }
+
+  function setArtFont(fontClass) {
+    const artHeading = document.getElementById('artHeading');
+    artHeading.className = `${fontClass} text-[22px] md:text-[26px] leading-none uppercase font-extrabold tracking-tight text-primary-container`;
+  }
+
+  function setArtColor(hex) {
+    document.getElementById('artHeading').style.color = hex;
+  }
+
+  // Artwork Scale & Alignment
+  function scaleArt(factor) {
+    studioState.artScale *= factor;
+    document.getElementById('artLayer').style.transform = `scale(${studioState.artScale})`;
+  }
+
+  function alignArtCenter() {
+    const art = document.getElementById('artLayer');
+    art.style.marginTop = '3rem';
+    art.style.transform = `scale(${studioState.artScale})`;
+  }
+
+  function resetArtTransform() {
+    studioState.artScale = 1;
+    const art = document.getElementById('artLayer');
+    art.style.transform = 'scale(1)';
+    art.style.marginTop = '3rem';
+  }
+
+  function resetArtLayer(e) {
+    e.stopPropagation();
+    document.getElementById('inputHeadingText').value = 'DIGITAFRIKA';
+    document.getElementById('inputSubheadingText').value = 'MAPUTO CREATIVE HUB // 2026';
+    updateArtText();
+    resetArtTransform();
+    document.getElementById('customUploadedPreview').classList.add('hidden');
+  }
+
+  // File Upload Preview
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const previewContainer = document.getElementById('customUploadedPreview');
+        const img = document.getElementById('clientLogoImage');
+        img.src = e.target.result;
+        previewContainer.classList.remove('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Pricing & Quantity Calculation Engine
+  function updateQuantityCalc(val) {
+    studioState.quantity = parseInt(val, 10);
+    document.getElementById('quantityNumberDisplay').innerText = studioState.quantity;
+    calculatePricing();
+  }
+
+  function calculatePricing() {
+    let discount = 0;
+    let label = 'LOTE REGULAR';
+    const q = studioState.quantity;
+
+    if (q >= 250) {
+      discount = 0.35;
+      label = '-35% (LOTE 250+)';
+    } else if (q >= 100) {
+      discount = 0.22;
+      label = '-22% (LOTE 100)';
+    } else if (q >= 50) {
+      discount = 0.12;
+      label = '-12% (LOTE 50)';
+    } else {
+      discount = 0;
+      label = 'TABELA BASE';
+    }
+
+    const unitPrice = Math.round(studioState.basePrice * (1 - discount));
+    document.getElementById('priceUnitDisplay').innerText = unitPrice.toLocaleString('pt-MZ') + ',00';
+    document.getElementById('discountBadge').innerText = label;
+    document.getElementById('tierInfoText').innerText = `${q} UNIDADES // ${label}`;
+  }
+
+  // Quote Submission Modal Logic
+  function handleQuoteSubmit(e) {
+    e.preventDefault();
+    document.getElementById('modalQuantityDigest').innerText = `${studioState.quantity} UNIDADES`;
+    document.getElementById('modalProductDigest').innerText = `${studioState.category} // ${studioState.printTech.split(' ')[0]}`;
+    document.getElementById('quoteSuccessModal').classList.remove('hidden');
+  }
+
+  function closeQuoteModal() {
+    document.getElementById('quoteSuccessModal').classList.add('hidden');
+  }
+
+  function downloadSpecSummary() {
+    alert('Ficha Técnica em PDF gerada com sucesso para a requisição de produção em Maputo.');
+    closeQuoteModal();
+  }
+
+  // Initial Calculation Run
+  calculatePricing();
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface mt-space-2xl"><div class="w-full px-margin-mobile md:px-margin lg:px-margin-desktop pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-lg mb-space-2xl"><div class="lg:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-display-lg text-headline-lg uppercase text-on-surface">DigitAfrika</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Potência criativa pan-africana de engenharia de marca, impressão industrial de alta precisão e estúdio 3D computacional. Do conceito ao produto físico em escala global.</p><div class="flex items-center gap-space-sm pt-space-sm"><span class="w-2.5 h-2.5 bg-primary-container shadow-[0_0_12px_rgba(198,255,0,0.35)]"></span><span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface">Capacidade Operacional Activa // Maputo Hub</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface-variant mb-space-xs">Unidades de Produção</span><a class="font-body-md text-body-md text-secondary hover:text-primary-container transition-colors" data-path="grafica-e-serigrafia" href="#">Gráfica Rápida &amp; Offset</a><a class="font-body-md text-body-md text-secondary hover:text-primary-container transition-colors" data-path="grafica-e-serigrafia" href="#">Serigrafia Têxtil Industrial</a><a class="font-body-md text-body-md text-secondary hover:text-primary-container transition-colors" data-path="estudio-3d" href="#">Estúdio 3D &amp; Motion Design</a><a class="font-body-md text-body-md text-secondary hover:text-primary-container transition-colors" data-path="servicos" href="#">Engenharia de Software &amp; Web</a><a class="font-body-md text-body-md text-secondary hover:text-primary-container transition-colors" data-path="servicos" href="#">Branding &amp; Design Editorial</a></div><div class="lg:col-span-4 flex flex-col gap-space-sm"><span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface-variant mb-space-xs">Hub &amp; Comunicações</span><div class="font-body-md text-body-md text-secondary"><p>Polana Cimento, Av. Julius Nyerere</p><p>Maputo, Moçambique</p></div><div class="flex flex-col gap-1 pt-space-xs"><span class="font-label-technical text-label-technical uppercase text-on-surface-variant">Linha Directa WhatsApp:</span><a class="font-headline-sm text-headline-sm text-primary-container hover:text-primary transition-colors" href="#">+258 84 000 0000</a></div><div class="font-label-technical text-label-technical text-secondary pt-space-xs"><p>Atendimento: Seg - Sex // 08:00 - 18:00 CAT</p><p>Gabinete Técnico: 24/7 sob escala de produção</p></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md font-label-technical text-label-technical text-on-surface-variant uppercase"><a class="hover:text-on-surface transition-colors" href="#">Instagram</a><a class="hover:text-on-surface transition-colors" href="#">LinkedIn</a><a class="hover:text-on-surface transition-colors" href="#">Behance</a><a class="hover:text-on-surface transition-colors" href="#">YouTube</a></div><div class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">© 2026 DigitAfrika Creative Group. Todos os direitos reservados.</div><div class="flex items-center gap-space-md font-label-technical text-label-technical text-on-surface-variant uppercase"><a class="hover:text-on-surface transition-colors" href="#">Termos Operacionais</a><a class="hover:text-on-surface transition-colors" href="#">Privacidade</a></div></div></div></footer></body></html>

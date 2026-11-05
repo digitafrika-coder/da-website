@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#191c1c", "on-secondary-container": "#b7b9b9", "error-container": "#93000a", "on-background": "#e3e2e6", "background": "#121316", "on-tertiary-container": "#60646c", "surface-container-highest": "#343538", "tertiary-fixed": "#dfe2eb", "secondary-container": "#47494a", "on-primary": "#273500", "secondary-fixed-dim": "#c5c7c7", "secondary-fixed": "#e1e3e3", "on-error-container": "#ffdad6", "surface-container": "#1f1f23", "surface-variant": "#343538", "on-primary-container": "#536d00", "on-secondary-fixed-variant": "#454747", "surface": "#121316", "error": "#ffb4ab", "secondary": "#c5c7c7", "inverse-on-surface": "#303034", "on-surface-variant": "#c3caac", "surface-container-high": "#292a2d", "tertiary-container": "#dfe2eb", "on-primary-fixed": "#151f00", "tertiary": "#ffffff", "primary-fixed": "#bef500", "inverse-primary": "#4e6700", "outline": "#8d9479", "surface-tint": "#a6d700", "on-error": "#690005", "outline-variant": "#434933", "surface-bright": "#38393c", "on-tertiary-fixed": "#181c22", "surface-container-lowest": "#0d0e11", "primary-fixed-dim": "#a6d700", "on-primary-fixed-variant": "#3a4d00", "primary-container": "#bef500", "primary": "#ffffff", "inverse-surface": "#e3e2e6", "on-tertiary": "#2c3137", "on-surface": "#e3e2e6", "tertiary-fixed-dim": "#c3c6cf", "on-secondary": "#2e3131", "surface-container-low": "#1b1b1f", "surface-dim": "#121316", "on-tertiary-fixed-variant": "#43474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3.5rem", "gutter-desktop": "2rem", "space-xs": "0.25rem", "space-2xl": "6rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-lg": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-desktop": "4rem", "margin": "2rem", "gutter-mobile": "1rem" }, "fontFamily": { "headline-lg-mobile": ["Syne"], "headline-sm": ["Space Grotesk"], "body-md": ["Space Grotesk"], "body-lg": ["Space Grotesk"], "headline-md-mobile": ["Space Grotesk"], "headline-lg": ["Syne"], "display-xl-mobile": ["Syne"], "body-sm": ["Space Grotesk"], "display-lg-mobile": ["Syne"], "headline-md": ["Space Grotesk"], "display-lg": ["Syne"], "label-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "display-xl": ["Syne"], "label-technical": ["Space Grotesk"] }, "fontSize": { "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "headline-md-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-xl-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}], "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "display-lg": ["68px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700"}], "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600"}], "display-xl": ["96px", {"lineHeight": "96px", "letterSpacing": "-0.04em", "fontWeight": "800"}], "label-technical": ["10px", {"lineHeight": "12px", "letterSpacing": "0.18em", "fontWeight": "500"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- HEADER & FLOATING CENTRAL NAV PILL -->
+<header class="fixed top-0 w-full z-50 bg-[#0B0C0F]/90 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="h-20 max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between">
+<!-- Official Brand Logo -->
+<a class="flex items-center gap-space-xs group shrink-0" data-path="inicio" href="#">
+<img alt="DigitAfrika Logo" class="h-8 sm:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFY_EqSYk3OXk6NG8VIjGv6bxnAHEi55xvtAZ__xHqXTDW0ZW-qWVIP6WSyGtRnAlPn-igYfmewKbfSx_Et7jipWTON0UH_Y2n4yYtki8_qjOQ1g_Dn7kGN2VIMtQYHi7qQCv-1vUpqvcLZiwhoA3BPT-5ejjkf3Tc9oyS3bjFyXIuu6CNjamD5t9PzN0H9aXAC705iCkTmlOxbsSkzu5VF2guUKhObsKd_WhCswrV4K37p9EDKgC2dA"/>
+</a>
+<!-- Floating Central Navigation Bar with Dropdown -->
+<nav class="hidden xl:flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-outline-variant/40 shadow-inner" data-active-classes="text-primary-container bg-surface-container font-bold">
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="inicio" href="#">Início</a>
+<!-- Servicos Multi-Level Trigger -->
+<div class="relative group">
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all inline-flex items-center gap-1" data-path="servicos" href="#">Serviços</a>
+<div class="absolute left-0 top-full pt-3 w-56 hidden group-hover:block z-50">
+<div class="bg-surface-container-lowest border border-outline-variant/40 shadow-2xl p-2 rounded-lg flex flex-col gap-1">
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-marketing" href="#">
+<span>Marketing</span>
+<span class="font-label-technical text-label-technical text-outline">03</span>
+</a>
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-publicidade" href="#">
+<span>Publicidade</span>
+<span class="font-label-technical text-label-technical text-outline">04</span>
+</a>
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-programacao" href="#">
+<span>Programação</span>
+<span class="font-label-technical text-label-technical text-outline">05</span>
+</a>
+</div>
+</div>
+</div>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="portfolio" href="#">Portfólio</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="detalhe-projecto" href="#">Projecto [Case]</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="sobre-nos" href="#">Sobre Nós</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="contactos" href="#">Contactos</a>
+</nav>
+<!-- Right Side: Timezone Operational Badge & Brutalist CTA -->
+<div class="flex items-center gap-space-sm sm:gap-space-md">
+<div class="hidden lg:flex items-center gap-space-xs font-label-technical text-label-technical text-on-surface-variant border border-outline-variant/40 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#bef500]"></span>
+<span class="tracking-widest">MAPUTO [CAT]</span>
+</div>
+<a class="relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-surface-container-lowest transition-all shadow-[0_0_20px_rgba(190,245,0,0.3)]" data-path="contactos" href="#">
+<span>Fale Connosco</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO / STATEMENT SECTION -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden">
+<!-- Atmospheric subtle ambient glow -->
+<div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-primary-container/10 blur-[130px] pointer-events-none"></div>
+<div class="absolute bottom-0 -left-20 w-80 h-80 rounded-full bg-surface-container-high/40 blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl relative z-10">
+<!-- Breadcrumb Meta Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg text-outline">
+<div class="flex items-center gap-space-xs font-label-technical text-label-technical tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span class="text-primary-container font-semibold">03 // MARKETING &amp; ESTRATÉGIA COMERCIAL</span>
+<span class="text-outline-variant">/</span>
+<span>PILAR CORE DA MATRIX</span>
+</div>
+<div class="font-label-technical text-label-technical uppercase tracking-widest bg-surface-container-low px-3 py-1 rounded">
+          EXPANSÃO PAN-AFRICANA • MAPUTO HUB
+        </div>
+</div>
+<!-- Main Asymmetric Headline & Intro Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-end mb-space-xl">
+<div class="lg:col-span-8 min-w-0">
+<h1 class="font-display-lg text-headline-lg lg:text-display-lg uppercase text-primary tracking-tight leading-none mb-space-md">
+            ESTRATÉGIA QUE GERA IMPACTO REAL NO MERCADO.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Longe de fórmulas vazias: desenvolvemos inteligência de marca, tração comercial e posicionamento sólido para empresas que desafiam o status quo em Moçambique e além-fronteiras.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-md bg-surface-container p-space-md rounded-lg shadow-xl">
+<div class="flex items-center justify-between font-label-technical text-label-technical text-outline uppercase pb-space-xs">
+<span>// METRICAS DE IMPACTO</span>
+<span class="text-primary-container font-bold">+340% MÉDIA ROI</span>
+</div>
+<!-- Sparkline Data Vis Inline SVG -->
+<div class="w-full h-16 relative">
+<svg class="w-full h-full text-primary-container" fill="none" preserveaspectratio="none" viewbox="0 0 300 60">
+<path d="M0,50 Q40,48 70,35 T140,28 T210,12 T270,18 L300,5" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0,50 Q40,48 70,35 T140,28 T210,12 T270,18 L300,5 L300,60 L0,60 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Transformamos orçamentos estagnados em maquinarias previsíveis de geração de receita com dados operacionais em tempo real.
+          </p>
+</div>
+</div>
+<!-- Key Focus Strip Cards -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container-low p-space-md rounded">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">01 / ENGENHARIA</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase block">Dados</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pesquisa viva em mercado africano</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">02 / POSIÇÃO</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase block">Poder</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Liderança de categoria irrefutável</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">03 / VELOCIDADE</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase block">Escala</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Execução multicanal agressiva</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">04 / BALANÇO</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase block">Valor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">LTV maximizado por cliente activo</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6 CORE MARKETING SERVICES (BESPOKE BENTO ARCHITECTURE) -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-space-xl gap-space-md">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase block mb-space-xs">// ARSENAL TÁTICO &amp; ESTRATÉGICO</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary">SEIS NÚCLEOS DE EXECUÇÃO</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Cada disciplina opera interligada através da nossa metodologia orientada a valor comercial mensurável no terreno.
+        </p>
+</div>
+<!-- Grid of 6 High-Impact Modular Panels -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Serviço 1: Estratégia de Marketing -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase px-2 py-1 bg-surface-container-lowest rounded">
+                // SERVIÇO 01
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">
+                query_stats
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              Estratégia de Marketing
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Diagnóstico aprofundado do terreno competitivo, mapeamento minucioso de rivais directos, seleção cirúrgica de canais prioritários e criação de um roadmap acionável de tração comercial.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex flex-wrap gap-1.5">
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Diagnóstico de Mercado</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Auditoria de Rivais</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Roadmap de Tração</span>
+</div>
+</div>
+<!-- Serviço 2: Posicionamento de Marca -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase px-2 py-1 bg-surface-container-lowest rounded">
+                // SERVIÇO 02
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">
+                diamond
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              Posicionamento de Marca
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Definição de território verbal soberano, proposta de valor inconfundível perante o comprador e ressonância cultural contemporânea adaptada aos códigos do ecossistema moçambicano e regional.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex flex-wrap gap-1.5">
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Território Verbal</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Proposta de Valor</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Ressonância Cultural</span>
+</div>
+</div>
+<!-- Serviço 3: Gestão de Redes Sociais -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase px-2 py-1 bg-surface-container-lowest rounded">
+                // SERVIÇO 03
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">
+                hub
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              Gestão de Redes Sociais
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Linha editorial pensada para dominar feeds, moderação activa de comunidades engajadas e produção editorial contínua focada em construir autoridade inquestionável e afinidade emocional.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex flex-wrap gap-1.5">
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Linha Editorial</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Comunidade Activa</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Brand Authority</span>
+</div>
+</div>
+<!-- Serviço 4: Marketing Digital -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase px-2 py-1 bg-surface-container-lowest rounded">
+                // SERVIÇO 04
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">
+                polyline
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              Marketing Digital
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Estruturação completa de ecossistemas de atracção inbound, réguas inteligentes de nutrição de leads, automação comercial de ponta a ponta e consolidação de uma presença de ciclo fechado.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex flex-wrap gap-1.5">
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Inbound Architecture</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Nutrição CRM</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Presença Omnicanal</span>
+</div>
+</div>
+<!-- Serviço 5: Publicidade Paga e Performance -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase px-2 py-1 bg-surface-container-lowest rounded">
+                // SERVIÇO 05
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">
+                bolt
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              Publicidade Paga e Performance
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Campanhas ultra-direccionadas no Meta Ads, Google Search/Display e LinkedIn Ads orientadas por análise granular de atribuição, com calibração contínua de CAC e retorno sobre investimento publicitário.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex flex-wrap gap-1.5">
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Meta &amp; Google Ads</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">LinkedIn B2B Scale</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">CAC Otimizado</span>
+</div>
+</div>
+<!-- Serviço 6: Consultoria de Marketing -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase px-2 py-1 bg-surface-container-lowest rounded">
+                // SERVIÇO 06
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">
+                psychology
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              Consultoria de Marketing
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Aconselhamento executivo estratégico para conselhos de administração, comités executivos e diretores comerciais que buscam alinhar expansão de faturação com sustentabilidade operacional duradoura.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex flex-wrap gap-1.5">
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Board Advisory</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Crescimento Sustentável</span>
+<span class="font-label-technical text-label-technical text-secondary bg-surface-container px-2 py-0.5 rounded">Auditoria de Eficiência</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VALOR TANGÍVEL: COMO O MARKETING CONTRIBUI PARA O CRESCIMENTO -->
+<section class="w-full bg-surface-container-lowest py-space-2xl relative overflow-hidden">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="mb-space-xl">
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase block mb-space-xs">// MECÂNICA DE VALOR</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary max-w-2xl">
+          COMO O MARKETING CONTRIBUI PARA O CRESCIMENTO DO NEGÓCIO
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-sm">
+          Marketing de alta performance não é vaidade digital nem contagem de gostos. Medimos cada ação sob três dimensões comerciais irrefutáveis.
+        </p>
+</div>
+<!-- 3 Business Dimensions Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Dimensão 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="font-display-lg text-headline-lg text-primary-container font-extrabold leading-none">01</span>
+<div class="h-0.5 flex-1 bg-surface-container-high"></div>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Reconhecimento de Marca Duradouro
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Uma marca forte elimina a dependência de descontos predatórios e guerras de preços. Ao posicionar a sua empresa no topo da mente do decisor, reduzimos a fricção no momento da compra e criamos autoridade premium que perdura por décadas no mercado africano.
+            </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-technical text-label-technical text-primary-container uppercase block mb-1">IMPACTO DIRECTO:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Poder de fixação de preços (Pricing Power) e preferência espontânea do consumidor.</span>
+</div>
+</div>
+<!-- Dimensão 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="font-display-lg text-headline-lg text-primary-container font-extrabold leading-none">02</span>
+<div class="h-0.5 flex-1 bg-surface-container-high"></div>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Eficiência de Aquisição
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Alinhamos os funis comerciais para eliminar desperdício orçamental. Estruturamos segmentações apuradas que reduzem radicalmente o Custo por Lead (CPL) e o Custo de Aquisição de Clientes (CAC), entregando contactos qualificados e pré-educados à sua equipa de vendas.
+            </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-technical text-label-technical text-primary-container uppercase block mb-1">IMPACTO DIRECTO:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Aceleração de ciclos de fecho comercial e compressão de custos de conversão.</span>
+</div>
+</div>
+<!-- Dimensão 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="font-display-lg text-headline-lg text-primary-container font-extrabold leading-none">03</span>
+<div class="h-0.5 flex-1 bg-surface-container-high"></div>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Retenção &amp; Valor de Vida do Cliente
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Conquistar um cliente é o primeiro marco; monetizar a sua fidelidade ao longo dos anos é onde reside o verdadeiro património corporativo. Desenvolvemos ecossistemas de relacionamento e cross-sell contínuos que multiplicam o Lifetime Value (LTV).
+            </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-technical text-label-technical text-primary-container uppercase block mb-1">IMPACTO DIRECTO:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Redução drástica do Churn Rate e maximização de faturação recorrente.</span>
+</div>
+</div>
+</div>
+<!-- Photographic Contextual Anchor with Detailed Prompt -->
+<div class="mt-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center bg-surface-container p-space-lg rounded-xl">
+<div class="lg:col-span-7 min-w-0">
+<div class="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="High-contrast modern corporate boardroom in Maputo, Mozambique with executive strategists discussing data dashboards illuminated by cool ambient monitor glow and warm architectural lighting, professional, sophisticated dark luxury agency aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC50o6svtGz9YLVFi2sFy15Y0IMn0PBf0LUitUM1JrUZfMq9V3H3ITWrQLBPRxvZbWUjillt9m2xnBpSpHo5Tx4rW4I6KC5ntfLu2Y_P8JQ9fZmH5q5ecM4omF0XOB2faW36lPdjvfVKFqdq4jpbZN8JxHCVD7ruog3d8CO8jBgysDUdGKA0P97cLdRLw9DowVXHF42xuTdSUJzQABfH-rphycbTwpSlcgJKsfUrwOd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 font-label-technical text-label-technical uppercase tracking-widest text-primary-container bg-surface-container-lowest/80 px-2.5 py-1 rounded">
+              WAR ROOM ESTRATÉGICA // MAPUTO HEADQUARTERS
+            </div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center">
+<span class="font-label-technical text-label-technical text-outline uppercase tracking-wider block mb-2">// INTELIGÊNCIA LOCAL, NORMAS INTERNACIONAIS</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-3">Conhecemos os fluxos reais de consumo em Moçambique</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Da banca ao retalho de alta rotação, das telecomunicações à indústria transformadora: a nossa leitura de mercado combina ferramentas de telemetria analítica com a sensibilidade cultural local necessária para gerar tração genuína.
+          </p>
+<div class="flex items-center gap-space-md text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-base">check_circle</span>
+<span>Dados Primários de Mercado</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-base">check_circle</span>
+<span>Testes Empíricos de Mensagem</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FLUXO DE TRABALHO DE MARKETING (4 PASSOS) -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-space-xl gap-space-md">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase block mb-space-xs">// PROCESSO RIGOROSO</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary">FLUXO DE TRABALHO EM 4 FASES</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Não deixamos o crescimento ao acaso. Cada projeto avança através de uma rota metodológica com portões de validação rigorosos.
+        </p>
+</div>
+<!-- 4 Stepped Flow Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Passo 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-lg text-headline-sm text-primary-container font-extrabold">FASE 01</span>
+<span class="material-symbols-outlined text-outline">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Auditoria &amp; Dados
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Imersão analítica nos ativos existentes do cliente, mapeamento de funil de vendas, levantamento da concorrência e identificação de gargalos de retenção e conversão.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-high/20 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<span class="font-label-technical text-label-technical text-outline uppercase block">Entregável:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Relatório Diagnóstico &amp; Benchmarking</span>
+</div>
+</div>
+<!-- Passo 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-lg text-headline-sm text-primary-container font-extrabold">FASE 02</span>
+<span class="material-symbols-outlined text-outline">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Estruturação do Plano
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Definição de posicionamento estratégico, modelagem de personas ideais, formulação de teses de atracção, atribuição orçamental e desenho de arquitetura de campanhas.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-high/20 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<span class="font-label-technical text-label-technical text-outline uppercase block">Entregável:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Plano Diretor Estratégico &amp; KPIs</span>
+</div>
+</div>
+<!-- Passo 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-lg text-headline-sm text-primary-container font-extrabold">FASE 03</span>
+<span class="material-symbols-outlined text-outline">rocket_launch</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Execução Multicanal
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Implementação táctica ágil: produção de peças editoriais, ativação de criativos de performance, configuração de esteiras de automação e disparo de mídia paga.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-high/20 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<span class="font-label-technical text-label-technical text-outline uppercase block">Entregável:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Campanhas em Produção Viva</span>
+</div>
+</div>
+<!-- Passo 4 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-lg text-headline-sm text-primary-container font-extrabold">FASE 04</span>
+<span class="material-symbols-outlined text-outline">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-sm">
+              Monitoria &amp; Otimização
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Telemetria contínua com dashboards em tempo real, testes A/B iterativos de mensagens, realocação de capital para criativos vencedores e reuniões táticas mensais.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-high/20 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<span class="font-label-technical text-label-technical text-outline uppercase block">Entregável:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dashboards &amp; Ajustes de Tração</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE DIAGNOSTIC / MATURITY CALCULATOR BANNER -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="bg-surface-container-low rounded-2xl p-space-lg lg:p-space-xl shadow-2xl relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container text-primary-container font-label-technical text-label-technical uppercase tracking-widest mb-space-sm">
+<span>SISTEMA DE AVALIAÇÃO COMERCIAL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary mb-space-sm">
+              ONDE SE ENCONTRA O SEU NEGÓCIO HOJE?
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-space-md">
+              A maioria das empresas opera com desperdício silencioso em campanhas que não conversam com o time de vendas. Faça o teste de 3 cliques e identifique a alavanca correta.
+            </p>
+<!-- Interactive Selector Pill Buttons (Vanilla JS controlled) -->
+<div class="space-y-space-sm" id="diagnostic-selector">
+<span class="font-label-technical text-label-technical text-outline uppercase block">Selecione o seu maior desafio atual:</span>
+<div class="flex flex-wrap gap-2">
+<button class="diag-btn px-4 py-2 text-left rounded font-label-lg text-label-lg transition-all bg-primary-container text-on-primary-fixed font-bold shadow-md" data-stage="traction" onclick="selectStage('traction')" type="button">
+                  01. Falta de Leads Qualificados
+                </button>
+<button class="diag-btn px-4 py-2 text-left rounded font-label-lg text-label-lg transition-all bg-surface-container text-on-surface hover:text-primary-container" data-stage="positioning" onclick="selectStage('positioning')" type="button">
+                  02. Guerra de Preços com Concorrentes
+                </button>
+<button class="diag-btn px-4 py-2 text-left rounded font-label-lg text-label-lg transition-all bg-surface-container text-on-surface hover:text-primary-container" data-stage="scale" onclick="selectStage('scale')" type="button">
+                  03. Dificuldade de Expansão Regional
+                </button>
+</div>
+</div>
+</div>
+<!-- Dynamic Output Card -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-inner" id="diagnostic-result">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-wider" id="diag-rec-tag">// SOLUÇÃO RECOMENDADA</span>
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2" id="diag-rec-title">Publicidade Paga &amp; Funil Inbound</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md" id="diag-rec-desc">
+              Estruturação urgente de segmentação no Meta e Google Ads com páginas dedicadas de alta conversão para nutrir imediatamente a equipa comercial com oportunidades quentes.
+            </p>
+<div class="p-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary block mb-1">Impacto Previsto:</span>
+<span id="diag-rec-impact">Redução de até 40% no custo por aquisição nos primeiros 60 dias de execução tática.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STRATEGIC DIAGNOSIS SCHEDULING CTA SECTION -->
+<section class="w-full bg-surface-container-high py-space-2xl relative overflow-hidden">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-6">
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase block mb-space-xs">// DISPONIBILIDADE EXECUTIVA</span>
+<h2 class="font-display-lg text-headline-lg lg:text-headline-lg uppercase text-primary leading-tight mb-space-md">
+            AGENDE UM DIAGNÓSTICO ESTRATÉGICO DE MARKETING
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg">
+            Sente-se com os nossos diretores de estratégia para dissecar o seu modelo de marketing actual. Uma análise executiva profunda de 45 minutos sem custos ou obrigações com retorno imediato de clareza.
+          </p>
+<div class="space-y-space-sm font-body-md text-body-md text-on-surface mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center font-bold text-xs">✓</span>
+<span>Análise preliminar de tráfego, autoridade digital e posicionamento</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center font-bold text-xs">✓</span>
+<span>Identificação clara de 3 fugas de receita no seu fluxo comercial</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center font-bold text-xs">✓</span>
+<span>Recomendações aplicáveis para implementação imediata pela sua equipa</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-outline font-label-technical text-label-technical uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Slots limitados por ciclo quinzenal para clientes corporativos</span>
+</div>
+</div>
+<!-- High-End Brutalist Direct Form Card -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-2xl">
+<div class="mb-space-md">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">// PROTOCOLO DE RESERVA</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary">Preencha os dados da sua empresa</h3>
+</div>
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Solicitação de diagnóstico estratégico enviada com sucesso. A equipa executiva da DigitAfrika entrará em contacto nas próximas 4 horas úteis.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-1.5">Nome do Decisor</label>
+<input class="w-full bg-surface-container text-primary font-body-md text-body-md px-4 py-3 rounded outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline" placeholder="Ex: Armando Sitoe" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-1.5">Nome da Empresa</label>
+<input class="w-full bg-surface-container text-primary font-body-md text-body-md px-4 py-3 rounded outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline" placeholder="Ex: Grupo Horizonte Lda" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-1.5">Email Corporativo</label>
+<input class="w-full bg-surface-container text-primary font-body-md text-body-md px-4 py-3 rounded outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline" placeholder="decisor@empresa.co.mz" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-1.5">WhatsApp / Contacto Directo</label>
+<input class="w-full bg-surface-container text-primary font-body-md text-body-md px-4 py-3 rounded outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline" placeholder="+258 84 000 0000" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-1.5">Serviço de Maior Interesse</label>
+<select class="w-full bg-surface-container text-primary font-body-md text-body-md px-4 py-3 rounded outline-none focus:bg-surface-container-high transition-colors">
+<option value="1">Estratégia Integral &amp; Posicionamento</option>
+<option value="2">Publicidade Paga &amp; Performance (CAC / Leads)</option>
+<option value="3">Gestão de Redes Sociais &amp; Linha Editorial</option>
+<option value="4">Marketing Digital &amp; Automação de Vendas</option>
+<option value="5">Consultoria de Marketing para Comité Executivo</option>
+</select>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-fixed hover:bg-primary hover:text-surface-container-lowest font-headline-sm text-label-lg font-bold uppercase tracking-wider rounded transition-all duration-300 flex items-center justify-center gap-2 shadow-lg mt-space-md" type="submit">
+<span>SOLICITAR DIAGNÓSTICO ESTRATÉGICO</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<p class="font-label-technical text-label-technical text-outline uppercase text-center mt-2">
+              Privacidade estrita. Acordo de Confidencialidade (NDA) executável sob pedido.
+            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for Diagnostic Micro-interaction -->
+<script>
+    function selectStage(stage) {
+      const data = {
+        traction: {
+          tag: '// SOLUÇÃO RECOMENDADA: TRACÇÃO RÁPIDA',
+          title: 'Publicidade Paga & Funil Inbound',
+          desc: 'Estruturação urgente de segmentação no Meta e Google Ads com páginas dedicadas de alta conversão para nutrir imediatamente a equipa comercial com oportunidades quentes.',
+          impact: 'Redução de até 40% no custo por aquisição nos primeiros 60 dias de execução tática.'
+        },
+        positioning: {
+          tag: '// SOLUÇÃO RECOMENDADA: VALOR DE MARCA',
+          title: 'Posicionamento & Território Verbal',
+          desc: 'Reconfiguração da proposta de valor e distinção cultural para que a sua empresa seja percecionada como a autoridade inquestionável, libertando a sua operação de descontos forçados.',
+          impact: 'Aumento sustentado de margens e facilidade imediata de negociação de contratos de maior porte.'
+        },
+        scale: {
+          tag: '// SOLUÇÃO RECOMENDADA: ARQUITETURA DE ESCALA',
+          title: 'Consultoria & Ecossistema Digital Completo',
+          desc: 'Aconselhamento executivo para conselhos de administração aliado à montagem de canais omnicanal automatizados para expandir a presença de mercado sem inchar custos fixos.',
+          impact: 'Aceleração da expansão com previsibilidade e retenção calculada através de CRM integrado.'
+        }
+      };
+
+      // Update Result Card
+      const res = data[stage];
+      if (res) {
+        document.getElementById('diag-rec-tag').innerText = res.tag;
+        document.getElementById('diag-rec-title').innerText = res.title;
+        document.getElementById('diag-rec-desc').innerText = res.desc;
+        document.getElementById('diag-rec-impact').innerText = res.impact;
+
+        // Update button states
+        const btns = document.querySelectorAll('.diag-btn');
+        btns.forEach(btn => {
+          if (btn.getAttribute('data-stage') === stage) {
+            btn.className = 'diag-btn px-4 py-2 text-left rounded font-label-lg text-label-lg transition-all bg-primary-container text-on-primary-fixed font-bold shadow-md';
+          } else {
+            btn.className = 'diag-btn px-4 py-2 text-left rounded font-label-lg text-label-lg transition-all bg-surface-container text-on-surface hover:text-primary-container';
+          }
+        });
+      }
+    }
+  </script>
+</div></main>
+<!-- MULTI-COLUMN FOOTER & DIRECTORY -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-2xl">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-space-xl pb-space-xl border-b border-outline-variant/20">
+<div class="max-w-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-sm">// ARCHITECTURE 01</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-primary leading-none mb-space-md">DigitAfrika.<br/><span class="text-outline">Radical &amp; Precision.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Vanguarda Criativa &amp; Engenharia de Software operando a partir de Maputo, Moçambique — servindo marcas pan-africanas e globais com arquitectura de alto impacto.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-lg w-full lg:w-auto">
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 03 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Marketing</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Estratégia de Marca</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Posicionamento Cultural</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Performance &amp; Escala</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Consultoria Analítica</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 04 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Publicidade</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Identidade Visual Brutal</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Campanhas Multicanal</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Direcção Criativa &amp; Arte</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Motion &amp; 3D Design</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 05 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Programação</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Plataformas Web Core</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Sistemas Cloud &amp; Mobile</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Design Systems UI/UX</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Arquitetura Empresarial</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg border-b border-outline-variant/20 font-body-sm text-body-sm">
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Hub Principal // Maputo</span>
+<p class="text-on-surface">Av. Julius Nyerere, Polana Cimento<br/>Maputo, Moçambique [CAT]</p>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Contacto Directo</span>
+<a class="text-primary hover:text-primary-container transition-colors block" href="mailto:hello@digitafrika.com">hello@digitafrika.com</a>
+<span class="text-on-surface-variant">+258 84 000 0000 (Linha WhatsApp)</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Disponibilidade Global</span>
+<div class="flex items-center gap-space-xs text-primary-container font-label-technical text-label-technical uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span>Disponível Para Novos Projectos</span>
+</div>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Canais Digitais</span>
+<div class="flex items-center gap-space-md pt-1">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">GitHub</a>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row justify-between items-center gap-space-md font-label-technical text-label-technical text-outline uppercase">
+<p>© 2026 DIGITAFRIKA DIGITAL LTD. TODOS OS DIREITOS RESERVADOS.</p>
+<p class="text-on-surface-variant">MAPUTO — RADICAL PAN-AFRICAN CREATIVE &amp; TECH MATRIX</p>
+</div>
+</div>
+</footer>
+</body></html>

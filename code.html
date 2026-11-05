@@ -1,0 +1,884 @@
+<!DOCTYPE html><html class="dark" lang="pt"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#292a2d", "on-secondary-fixed": "#191c1c", "outline": "#8d9479", "tertiary-fixed-dim": "#c3c6cf", "primary-container": "#bef500", "on-background": "#e3e2e6", "tertiary-fixed": "#dfe2eb", "error": "#ffb4ab", "surface": "#121316", "on-secondary": "#2e3131", "surface-tint": "#a6d700", "surface-variant": "#343538", "surface-container": "#1f1f23", "on-secondary-container": "#b7b9b9", "on-secondary-fixed-variant": "#454747", "on-primary-container": "#536d00", "on-surface": "#e3e2e6", "inverse-on-surface": "#303034", "on-error": "#690005", "primary-fixed-dim": "#a6d700", "on-error-container": "#ffdad6", "primary": "#ffffff", "outline-variant": "#434933", "secondary-fixed-dim": "#c5c7c7", "surface-bright": "#38393c", "on-tertiary-fixed": "#181c22", "on-tertiary-fixed-variant": "#43474e", "on-surface-variant": "#c3caac", "secondary": "#c5c7c7", "tertiary": "#ffffff", "on-primary-fixed": "#151f00", "surface-dim": "#121316", "on-tertiary-container": "#60646c", "secondary-fixed": "#e1e3e3", "tertiary-container": "#dfe2eb", "on-primary": "#273500", "inverse-surface": "#e3e2e6", "inverse-primary": "#4e6700", "background": "#121316", "secondary-container": "#47494a", "on-tertiary": "#2c3137", "surface-container-low": "#1b1b1f", "error-container": "#93000a", "surface-container-highest": "#343538", "surface-container-lowest": "#0d0e11", "primary-fixed": "#bef500", "on-primary-fixed-variant": "#3a4d00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "space-lg": "2rem", "gutter": "1.5rem", "space-2xl": "6rem", "margin-desktop": "4rem", "space-xl": "3.5rem", "gutter-desktop": "2rem", "margin": "2rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Space Grotesk"], "display-xl-mobile": ["Syne"], "label-md": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-lg": ["Syne"], "headline-lg-mobile": ["Syne"], "display-lg-mobile": ["Syne"], "display-xl": ["Syne"], "body-md": ["Space Grotesk"], "body-lg": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "label-technical": ["Space Grotesk"], "body-sm": ["Space Grotesk"], "headline-md-mobile": ["Space Grotesk"], "display-lg": ["Syne"] }, "fontSize": { "headline-sm": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "display-xl-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600"}], "headline-md": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "headline-lg": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-xl": ["96px", {"lineHeight": "96px", "letterSpacing": "-0.04em", "fontWeight": "800"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700"}], "label-technical": ["10px", {"lineHeight": "12px", "letterSpacing": "0.18em", "fontWeight": "500"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}], "headline-md-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "display-lg": ["68px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- =========================================================================
+     HEADER & FLOATING CENTRAL NAV PILL (UNIFIED)
+     ========================================================================= -->
+<header class="fixed top-0 w-full z-50 bg-[#0B0C0F]/85 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="h-20 max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between">
+<!-- Brand Official Logo -->
+<a class="flex items-center gap-3 group" data-path="home" href="#">
+<img alt="DigitAfrika" class="h-8 sm:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFY_EqSYk3OXk6NG8VIjGv6bxnAHEi55xvtAZ__xHqXTDW0ZW-qWVIP6WSyGtRnAlPn-igYfmewKbfSx_Et7jipWTON0UH_Y2n4yYtki8_qjOQ1g_Dn7kGN2VIMtQYHi7qQCv-1vUpqvcLZiwhoA3BPT-5ejjkf3Tc9oyS3bjFyXIuu6CNjamD5t9PzN0H9aXAC705iCkTmlOxbsSkzu5VF2guUKhObsKd_WhCswrV4K37p9EDKgC2dA">
+</a>
+<!-- Rounded Floating Central Nav Pill -->
+<nav class="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/60 backdrop-blur-md border border-outline-variant/40 shadow-inner">
+<a aria-current="page" class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold uppercase tracking-wider transition-all" data-path="home" href="#">Início</a>
+<a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="services" href="#triad">Serviços</a>
+<a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="about" href="#approach">Sobre</a>
+<a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="work" href="#work">Portfólio</a>
+<a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="contact" href="#contact">Contacto</a>
+</nav>
+<!-- Right: Badge & CTA -->
+<div class="flex items-center gap-space-sm sm:gap-space-md">
+<div class="hidden lg:flex items-center gap-space-xs font-label-technical text-label-technical text-on-surface-variant border border-outline-variant/40 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#bef500]"></span>
+<span class="tracking-widest">MAPUTO [CAT]</span>
+</div>
+<a class="relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-surface-container-lowest transition-all shadow-[0_0_20px_rgba(190,245,0,0.3)]" data-path="contact" href="#contact">
+<span class="">Fale Connosco</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- =========================================================================
+     HERO SECTION (FAITHFUL TO SCREEN_6 / SCREEN_8 LAYOUT)
+     ========================================================================= -->
+<section class="relative w-full overflow-hidden bg-[#0B0C0F] -mt-20 pt-28 pb-space-lg min-h-[920px] lg:min-h-[960px] flex flex-col justify-between">
+<!-- Ambient Neon & Radial Glows behind sculpture -->
+<div class="absolute top-1/4 right-0 lg:right-6 w-[700px] lg:w-[940px] h-[700px] lg:h-[940px] rounded-full blur-[160px] pointer-events-none" style="background: radial-gradient(circle, rgba(190, 245, 0, 0.22) 0%, rgba(11, 12, 15, 0) 70%);"></div>
+<div class="absolute -top-12 left-1/4 w-96 h-96 bg-surface-container-high/30 rounded-full blur-[130px] pointer-events-none"></div>
+<div class="max-w-[1600px] w-full mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop relative z-10 flex-grow flex flex-col justify-between">
+<!-- Top Editorial Ticker Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md text-on-surface-variant font-label-technical text-label-technical uppercase tracking-widest border-b border-outline-variant/20">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_10px_#bef500]"></span>
+<span class="text-primary font-semibold">AGÊNCIA CRIATIVA &amp; DIGITAL INDEPENDENTE</span>
+<span class="text-outline-variant px-space-xs">/</span>
+<span class="">MAPUTO • JOANESBURGO • LISBOA</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-md">
+<span class="">EDIÇÃO PORTFÓLIO // 2026</span>
+<span class="text-primary-container font-semibold">● CRAFT ARQUITETÓNICO</span>
+</div>
+</div>
+<!-- Main Split Hero Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md lg:gap-8 items-center pt-space-sm lg:pt-space-md pb-space-sm relative flex-grow">
+<!-- Left Content Column -->
+<div class="lg:col-span-5 flex flex-col z-20 space-y- space-y-4 max-w-lg py-space-xs">
+<!-- Eyebrow Badge Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-high/60 backdrop-blur-md border border-outline-variant/40 text-on-surface font-mono text-xs uppercase tracking-wider w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span class="text-[11px] font-semibold tracking-wide">AGÊNCIA CRIATIVA &amp; DIGITAL</span>
+</div>
+<!-- Headline stacked line-by-line -->
+<h1 class="font-display-xl text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[1.05]">
+<span class="block text-white">Pensamos.</span>
+<span class="block text-white">Criamos.</span>
+<span class="block text-[#C6FF00] drop-shadow-[0_0_24px_rgba(198,255,0,0.5)]">Transformamos.</span>
+</h1>
+<!-- Narrative Paragraph -->
+<p class="font-body-md text-base sm:text-lg text-secondary max-w-md leading-relaxed">
+          Unimos marketing, publicidade e programação para impulsionar marcas, criar experiências e desenvolver soluções digitais de alto impacto global.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm pt-2">
+<a class="px-7 py-3.5 rounded-full bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-surface-container-lowest transition-all shadow-[0_0_24px_rgba(190,245,0,0.35)] flex items-center gap-2 group" href="#contact">
+<span class="">Vamos Trabalhar Juntos</span>
+<span class="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">north_east</span>
+</a>
+<a class="px-6 py-3.5 rounded-full bg-surface-container-high/50 hover:bg-surface-container-high border border-outline-variant/40 hover:border-primary-container text-white font-label-lg text-label-lg font-medium uppercase tracking-wider transition-all flex items-center gap-2.5 group" href="#work">
+<span class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</span>
+<span class="">Ver Nosso Reel</span>
+<span class="text-xs text-outline font-mono">1:45</span>
+</a>
+</div>
+<!-- Stat counters bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md max-w-lg border-t border-outline-variant/20 mt-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-2xl text-primary font-bold leading-none">85+</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Projectos</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-2xl text-primary font-bold leading-none">5+</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Anos Exp.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-2xl text-primary font-bold leading-none">12+</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Mercados</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-2xl text-primary-container font-bold leading-none">98%</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Satisfação</span>
+</div>
+</div>
+</div>
+<!-- Right 3D Visual Sculpture Column -->
+<div class="lg:col-span-7 relative flex items-center justify-center min-h-[580px] lg:min-h-[820px] w-full">
+<!-- Glowing Spatial Ambient Rings -->
+<div class="absolute w-[560px] h-[560px] lg:w-[740px] lg:h-[740px] rounded-full border border-primary-container/15 -z-0 pointer-events-none animate-pulse"></div>
+<div class="absolute w-[420px] h-[420px] lg:w-[560px] lg:h-[560px] rounded-full border border-outline-variant/25 -z-0 pointer-events-none"></div>
+<!-- Monumental Cyber Sculpture with mask-image fade -->
+<div class="relative z-10 w-full flex items-center justify-center overflow-visible" style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0.4) 85%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0.4) 85%, rgba(0,0,0,0) 100%);">
+<img alt="Retrato Cibernético com Fitas Digitais" class="w-full max-w-[620px] sm:max-w-[700px] lg:max-w-[880px] h-[520px] sm:h-[640px] lg:h-[800px] object-contain drop-shadow-[0_30px_70px_rgba(0,0,0,0.95)] hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbbVV0dtrR8igOaPcEC3ieC9R7jKZTDi5AQTHuC8LVYHgjD5gtB6nvQMeZSZIKJTyLPCj0WfWH1sLpIhL3rq8O07WTsol4sP8NBdj3_4JRuqvdDCW44Z0XscpFzh9zS9EtET5lEGJ6_9tAefDQNfjfwYhUfY0FK2hjrnfcoSKxOj2I0Cb2P2l5NcKLgYsmojNbroCKsYbyEbR0KZZyfiP1YNKXdm3Bigf5aMtIOEVqej9uLccH6ZZ9w">
+<div class="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-[#0B0C0F] via-[#0B0C0F]/80 to-transparent pointer-events-none z-10"></div>
+</div>
+<!-- Floating Card 01: Top Right (Estratégia de Marca) -->
+<div class="absolute top-6 sm:top-10 right-0 lg:-right-4 z-20 flex items-center group">
+<div class="hidden sm:block w-8 sm:w-12 h-[1px] bg-primary-container/50 -mr-1"></div>
+<div class="flex items-center gap-space-sm p-3 px-4 rounded-xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/40 shadow-2xl hover:border-primary-container/60 hover:bg-surface-container transition-all max-w-[270px] sm:max-w-[290px]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-base">campaign</span>
+</div>
+<div class="flex flex-col pr-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-body-sm font-bold text-primary group-hover:text-primary-container transition-colors">Estratégia de Marca</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container group-hover:translate-x-0.5 transition-all text-xs">north_east</span>
+</div>
+<span class="text-[11px] text-on-surface-variant leading-tight">Transformamos ideias em marcas de poder.</span>
+</div>
+</div>
+</div>
+<!-- Floating Card 02: Middle Right (Design Criativo) -->
+<div class="absolute top-1/2 -translate-y-6 right-0 lg:-right-6 z-20 flex items-center group">
+<div class="hidden sm:block w-8 sm:w-12 h-[1px] bg-primary-container/50 -mr-1"></div>
+<div class="flex items-center gap-space-sm p-3 px-4 rounded-xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/40 shadow-2xl hover:border-primary-container/60 hover:bg-surface-container transition-all max-w-[270px] sm:max-w-[290px]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-base">palette</span>
+</div>
+<div class="flex flex-col pr-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-body-sm font-bold text-primary group-hover:text-primary-container transition-colors">Design Criativo</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container group-hover:translate-x-0.5 transition-all text-xs">north_east</span>
+</div>
+<span class="text-[11px] text-on-surface-variant leading-tight">Direcção criativa de alto impacto.</span>
+</div>
+</div>
+</div>
+<!-- Floating Card 03: Bottom Right (Crescimento Digital) -->
+<div class="absolute bottom-20 sm:bottom-24 right-0 lg:-right-4 z-20 flex items-center group">
+<div class="hidden sm:block w-8 sm:w-12 h-[1px] bg-primary-container/50 -mr-1"></div>
+<div class="flex items-center gap-space-sm p-3 px-4 rounded-xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/40 shadow-2xl hover:border-primary-container/60 hover:bg-surface-container transition-all max-w-[270px] sm:max-w-[290px]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-base">trending_up</span>
+</div>
+<div class="flex flex-col pr-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-body-sm font-bold text-primary group-hover:text-primary-container transition-colors">Crescimento Digital</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container group-hover:translate-x-0.5 transition-all text-xs">north_east</span>
+</div>
+<span class="text-[11px] text-on-surface-variant leading-tight">Mais tráfego. Mais leads. Mais conversão.</span>
+</div>
+</div>
+</div>
+<!-- Floating Card 04: Bottom-Left (Último Projecto) -->
+<div class="absolute bottom-2 left-0 sm:left-4 z-20">
+<a class="inline-flex items-center gap-space-sm p-2.5 pr-4 rounded-xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/40 shadow-2xl hover:border-primary-container/60 hover:bg-surface-container transition-all group max-w-[280px]" href="#work">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container-highest flex-shrink-0 border border-outline-variant/30">
+<img alt="Último Projecto" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ylttlFRVxemPGEj7bPY5tGpdzj6awNc3sMYpOUiwOHT-WkebiRTrL2iKvy_bbza5MQR6n8AzP_VtEi-WLp3yCa7Jdb0qxhgXa_F4FyQZThc0j0odRZWYoeN7IioaTXXSjgSNCjtI4JygGdaOKKi-vda-aVqbDK-nf5nDL-T2iOJCLlu6UizkDe8t5GXRndmgAFiCuDQyljeYrWNd7NbV1opgJhLYU7ltkqOeijzL">
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical text-outline uppercase tracking-wider">ÚLTIMO PROJECTO</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold group-hover:text-primary-container transition-colors leading-tight">Branding Tech Futuro</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-all ml-auto">
+<span class="material-symbols-outlined text-xs">north_east</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Meta Strip & Animated Scroll Down -->
+<div class="flex items-center justify-between pt-space-md border-t border-outline-variant/20 text-on-surface-variant font-label-technical text-label-technical uppercase tracking-widest">
+<a class="flex items-center gap-space-xs text-secondary hover:text-primary-container transition-colors group" href="#triad">
+<span class="w-6 h-6 flex items-center justify-center bg-surface-container-high group-hover:bg-primary-container group-hover:text-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</span>
+<span class="">↓ ROLE PARA EXPLORAR A ARQUITETURA</span>
+</a>
+<span class="hidden md:inline-block text-outline">LAT -25.9653 // LONG 32.5782</span>
+<!-- Animated mouse indicator -->
+<a class="flex items-center gap-2 text-secondary hover:text-primary-container transition-colors cursor-pointer" href="#triad">
+<span class="hidden sm:inline-block">Rolar Para Baixo</span>
+<div class="w-4 h-7 rounded-full border border-outline-variant/60 flex items-start justify-center p-1">
+<span class="w-1 h-1.5 rounded-full bg-primary-container animate-bounce"></span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 03 — THREE WORLDS. ONE VISION. (THE TRIAD)
+       ========================================================================= -->
+<section class="w-full bg-surface py-space-2xl" id="triad">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-2xl">
+<div class="max-w-2xl">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 02 — A TRÍADE</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight leading-tight">
+            TRÊS MUNDOS.<br>UMA VISÃO.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-md leading-relaxed">
+          Da estratégia à criatividade. Da comunicação à tecnologia. Reunimos diferentes competências para transformar possibilidades em resultados reais, mensuráveis e escaláveis.
+        </p>
+</div>
+<!-- Asymmetrical 3-Column Editorial Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Pillar 01: MARKETING -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container transition-colors duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase">PILAR // 01</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright group-hover:text-primary transition-colors">01</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-space-sm">MARKETING</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Pensamento analítico, estratégia de penetração de mercado e aceleração de performance comercial focada no consumidor africano e em escalas globais.
+            </p>
+<!-- Interactive Metric Highlight Box -->
+<div class="p-space-md bg-surface-container-lowest mb-space-lg">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Métrica Média de Impacto</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-primary-container">+340%</span>
+<span class="font-body-sm text-body-sm text-secondary">Aumento de Alcance Orgânico</span>
+</div>
+</div>
+<!-- List Tags -->
+<ul class="space-y-space-xs font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Estratégia de Marketing &amp; Crescimento</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Posicionamento &amp; Território de Marca</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Sistemas de Redes Sociais &amp; Influência</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Publicidade Paga &amp; Performance</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Consultoria Executiva de Marketing</li>
+</ul>
+</div>
+<div class="pt-space-xl mt-space-lg flex items-center justify-between">
+<span class="font-label-technical text-label-technical uppercase text-outline">ESTRATÉGIA PRIMEIRO</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 group-hover:text-primary-container transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 02: PUBLICIDADE -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container transition-colors duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase">PILAR // 02</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright group-hover:text-primary transition-colors">02</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-space-sm">PUBLICIDADE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Direção de arte radical, campanhas transmidiáticas e narrativa cinematográfica que desafiam a mesmice visual e dominam a atenção cultural.
+            </p>
+<!-- Visual Asset Mockup Preview -->
+<div class="w-full h-32 bg-surface-container-lowest mb-space-lg overflow-hidden relative group-hover:brightness-110 transition-all">
+<img class="w-full h-full object-cover" data-alt="Design visual publicitário de vanguarda com tipografia africana ousada e grafismos neon experimentais" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN6yhjN3AWU49MlvhtXGpmEOOoq9bLtft_XfG2WYFrjIO0J9WDD2xQHJ6mO09MpuwLVKz4fJVF-YAedoeTRl9f1MJGR94xiaR9XBOVz-X07q9HGDnRBxdQxiRhFiwIMbaIlmlyDs1EUBdYUkxpDm1-69za5kvxGy2_bRtIVpa5SDmNc9DOeVuLVy8Mjm6I8lIOgJYRIP8peFEHpimQf51nwVjWiACZA061Q1cNE48U">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 font-label-technical text-label-technical text-primary uppercase">CRAFT &amp; DIRECÇÃO</span>
+</div>
+<!-- List Tags -->
+<ul class="space-y-space-xs font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Identidade Visual &amp; Rebranding Sistémico</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Direcção de Arte &amp; Editorial Global</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Cinema &amp; Produção de Vídeo High-End</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Motion Graphics &amp; 3D Hiper-surrealismo</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Dominação OOH &amp; Impressão Espacial</li>
+</ul>
+</div>
+<div class="pt-space-xl mt-space-lg flex items-center justify-between">
+<span class="font-label-technical text-label-technical uppercase text-outline">EMOÇÃO &amp; IMPACTO</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 group-hover:text-primary-container transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 03: PROGRAMAÇÃO -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between shadow-xl hover:bg-surface-container-high transition-colors duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase">PILAR // 03</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright group-hover:text-primary transition-colors">03</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-space-sm">PROGRAMAÇÃO</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Engenharia digital de vanguarda: plataformas web resilientes, aplicações móveis nativas e sistemas de infraestrutura de carga crítica.
+            </p>
+<!-- Technical Terminal Window Preview -->
+<div class="p-space-md bg-surface-container-lowest mb-space-lg font-mono text-xs text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center gap-1.5 pb-1 text-[9px] text-outline">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="w-2 h-2 rounded-full bg-surface-bright"></span>
+<span class="ml-2 uppercase">SISTEMA.STACK</span>
+</div>
+<p class="text-primary-container">&gt; deploy: micro-frontend.core</p>
+<p class="text-secondary">&gt; latência: 14ms (CDN África Subsaariana)</p>
+</div>
+<!-- List Tags -->
+<ul class="space-y-space-xs font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Plataformas Web Personalizadas &amp; Portais</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Aplicações Web &amp; Mobile Escaláveis</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Integrações de API &amp; Microsserviços</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Sistemas de Design UI/UX Empresariais</li>
+<li class="flex items-center gap-space-xs"><span class="w-1 h-1 bg-primary-container"></span>Infraestrutura Cloud Resiliente</li>
+</ul>
+</div>
+<div class="pt-space-xl mt-space-lg flex items-center justify-between">
+<span class="font-label-technical text-label-technical uppercase text-primary-container">ZERO LATÊNCIA</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 group-hover:text-primary-container transition-all">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 04 — SELECTED WORK. REAL IDEAS. REAL IMPACT.
+       ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-2xl" id="work">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<!-- Section Title & Meta -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 03 — PORTFÓLIO SELECIONADO</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight">
+            PROJECTOS SELECIONADOS.<br><span class="text-secondary">IMPACTO REAL.</span>
+</h2>
+</div>
+<div class="flex items-center gap-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            Uma selecção de projectos que reflecte a nossa criatividade, capacidade estratégica e versatilidade em múltiplos mercados.
+          </p>
+</div>
+</div>
+<!-- Asymmetrical Portfolio Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-xl">
+<!-- Project 01: Hero Massive Card (12 Columns) -->
+<div class="lg:col-span-12 group bg-surface-container-low overflow-hidden relative shadow-lg hover:shadow-2xl transition-all duration-500">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<div class="lg:col-span-7 h-[380px] lg:h-[520px] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Visual editorial da interface da plataforma Kuvula FinTech em tablet, dashboard analítico e financeiro moderno em Maputo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ylttlFRVxemPGEj7bPY5tGpdzj6awNc3sMYpOUiwOHT-WkebiRTrL2iKvy_bbza5MQR6n8AzP_VtEi-WLp3yCa7Jdb0qxhgXa_F4FyQZThc0j0odRZWYoeN7IioaTXXSjgSNCjtI4JygGdaOKKi-vda-aVqbDK-nf5nDL-T2iOJCLlu6UizkDe8t5GXRndmgAFiCuDQyljeYrWNd7NbV1opgJhLYU7ltkqOeijzL">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-surface-container-low hidden lg:block"></div>
+</div>
+<div class="lg:col-span-5 p-space-lg lg:p-space-xl flex flex-col justify-between bg-surface-container-low">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ESTUDO DE CASO // 01</span>
+<span class="font-label-technical text-label-technical text-outline uppercase">FINTECH • 2024</span>
+</div>
+<h3 class="font-headline-lg text-headline-md lg:text-headline-lg uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+                  PLATAFORMA DIGITAL KUVULA
+                </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-lg">
+                  Arquitectura integral de ecossistema financeiro para inclusão de micro-empresas na África Austral. Desenvolvimento de front-end reativo, autenticação biométrica e sistema visual completo.
+                </p>
+<div class="flex flex-wrap gap-space-xs mb-space-lg">
+<span class="px-space-xs py-1 bg-surface-container text-on-surface-variant font-label-technical text-label-technical uppercase">FINTECH UI/UX</span>
+<span class="px-space-xs py-1 bg-surface-container text-on-surface-variant font-label-technical text-label-technical uppercase">REACT NATIVE</span>
+<span class="px-space-xs py-1 bg-surface-container text-on-surface-variant font-label-technical text-label-technical uppercase">BRANDING</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-primary font-label-lg text-label-lg uppercase tracking-wider group-hover:text-primary-container transition-colors">
+<span class="">VER ESTUDO DE CASO</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 02: Side by Side Left (6 Columns) -->
+<div class="lg:col-span-6 group bg-surface-container-low overflow-hidden flex flex-col justify-between shadow-md">
+<div class="h-72 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Design de embalagens e campanha da Lumen Beverages, marca de bebidas com rótulos minimalistas em preto fosco e detalhes em lima" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6PNxKzYu_Tyg0zrGDpgeKtFkNcw1U_GnrT26qlZCrghVGH9e950LQaKG8LsxRIVFIt8HZ4Q02lCX5rZIlJZwMnJWY7-m6fovomxPB9Zvy6HOW-YPiEK7NMj2sOmmreoW1zEKXxvOL4wxrW6MB4ymknSkAs0YBzwvYCcNiBMIEI0geJeGgHaoWwiyf8QgQ2sX0hVwrnywk0fr3XLecblY_dNg09FEzCflwZAWJysQ_">
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 text-primary-container font-label-technical text-label-technical uppercase">
+              // 02 BRANDING
+            </div>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">BEBIDAS • DIRECÇÃO DE ARTE</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">2024</span>
+</div>
+<h3 class="font-headline-md text-headline-sm lg:text-headline-md uppercase text-primary mb-space-xs group-hover:text-primary-container transition-colors">
+                REBRAND LUMEN BEVERAGES
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+                Redesign de marca premium e campanha de posicionamento nacional com foco em embalagens sustentáveis e apelo editorial contemporâneo.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-lg text-label-lg uppercase tracking-wider group-hover:text-primary-container transition-colors pt-space-md">
+<span class="">EXPLORAR SISTEMA DE MARCA</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 03: Side by Side Right (6 Columns) -->
+<div class="lg:col-span-6 group bg-surface-container-low overflow-hidden flex flex-col justify-between shadow-md">
+<div class="h-72 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Mockup em smartphone de aplicativo de e-commerce moderno com checkout rápido e estética escura" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvjGHGMc3kn6Qjh7k9WTuOMUBes-yGXJeCpr1Qd6gzFiPnHKSu6Ek3hES597OojmAIJX4G50IiL4Iw2RqYSknUeaq30xFZGKzdco6cZiRQC-m0PBYhbwG1XbnNixSoiwFqJEpJywkUnzcGL8hVJiHrTFL-dEDm3fcfsMTVDPfMks5mgLQrwhW5vMRuxxcqPMda5LAYGRk7-jJH5Gl2O-yJ4Zep9Fi58A135_uW3KxI">
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 text-primary-container font-label-technical text-label-technical uppercase">
+              // 03 APLICAÇÃO MOBILE
+            </div>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">E-COMMERCE • MOBILE</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">2023</span>
+</div>
+<h3 class="font-headline-md text-headline-sm lg:text-headline-md uppercase text-primary mb-space-xs group-hover:text-primary-container transition-colors">
+                EXPERIÊNCIA VODA COMMERCE
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+                Solução omnicanal de comércio eletrónico com suporte a pagamentos móveis locais M-Pesa e experiência fluida de compra com checkout em 2 etapas.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-lg text-label-lg uppercase tracking-wider group-hover:text-primary-container transition-colors pt-space-md">
+<span class="">VER APLICAÇÃO</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 04: Panoramic Campaign Card (12 Columns) -->
+<div class="lg:col-span-12 group bg-surface-container p-space-lg lg:p-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-md hover:bg-surface-container-high transition-colors">
+<div class="max-w-xl">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 04 — FESTIVAL &amp; MOTION</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-space-sm group-hover:text-primary-container transition-colors">
+              FESTIVAL DE ARTES AFROPOLITAN
+            </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Direção de campanha para o maior festival de artes multidisciplinares da capital. Vídeos em motion design, totens dinâmicos OOH e aplicativo para programação em tempo real.
+            </p>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="px-space-md py-space-sm bg-surface-container-lowest text-primary font-label-technical text-label-technical uppercase">140K+ PARTICIPANTES</span>
+<a class="px-6 py-3 bg-primary-container text-on-primary-fixed font-label-lg text-label-lg uppercase tracking-wider hover:bg-primary transition-all flex items-center gap-space-xs" href="#">
+<span class="">ESTUDO DE CASO</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex justify-center pt-space-md">
+<a class="px-10 py-5 bg-surface-container text-primary font-label-lg text-label-lg uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-fixed transition-all shadow-md flex items-center gap-space-sm" href="#work">
+<span class="">EXPLORAR TODOS OS PROJECTOS</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 05 — OUR CAPABILITIES (WHAT WE BRING TO THE TABLE)
+       ========================================================================= -->
+<section class="w-full bg-surface py-space-2xl" id="services">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-space-lg mb-space-xl">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 04 — MATRIZ DE CAPACIDADES</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight">
+            O QUE TRAZEMOS<br>PARA A MESA.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-md">
+          Não acreditamos em silos de comunicação. Do diagnóstico inicial à linha final de código de produção, operamos como um departamento de crescimento unificado.
+        </p>
+</div>
+<!-- Interactive Accordion / Capability Rows -->
+<div class="flex flex-col gap-space-sm">
+<!-- Capability Row 01 -->
+<div class="bg-surface-container-low p-space-lg hover:bg-surface-container transition-all group">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">CAPACIDADE 01</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary group-hover:text-primary-container transition-colors">MARKETING &amp; ESTRATÉGIA</h3>
+</div>
+<div class="flex flex-wrap gap-space-xs max-w-xl">
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Pesquisa de Mercado</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Estratégia de Marca</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Canais Sociais</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Anúncios Pagos &amp; Performance</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Consultoria de Analytics</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors self-end lg:self-center">add</span>
+</div>
+</div>
+<!-- Capability Row 02 -->
+<div class="bg-surface-container-low p-space-lg hover:bg-surface-container transition-all group">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">CAPACIDADE 02</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary group-hover:text-primary-container transition-colors">PUBLICIDADE &amp; DIRECÇÃO DE ARTE</h3>
+</div>
+<div class="flex flex-wrap gap-space-xs max-w-xl">
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Identidade de Marca</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Sistemas Gráficos</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Filmes Comerciais</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Motion Graphics 3D</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Dominação Exterior</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors self-end lg:self-center">add</span>
+</div>
+</div>
+<!-- Capability Row 03 -->
+<div class="bg-surface-container-low p-space-lg hover:bg-surface-container transition-all group">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">CAPACIDADE 03</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary group-hover:text-primary-container transition-colors">PROGRAMAÇÃO &amp; ENGENHARIA</h3>
+</div>
+<div class="flex flex-wrap gap-space-xs max-w-xl">
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Plataformas Dedicadas</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">React / Next.js / Vue</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Aplicações iOS &amp; Android</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Infraestrutura de APIs</span>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase">Design Systems em Figma</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors self-end lg:self-center">add</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 07 — OUR APPROACH (GOOD WORK STARTS WITH GOOD THINKING)
+       ========================================================================= -->
+<section class="w-full bg-surface py-space-2xl" id="approach">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 06 — ARQUITETURA DE PROCESSO</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight">
+            BOM TRABALHO COMEÇA COM<br>BOM PENSAMENTO.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-sm">
+          Um método rigoroso e repetível concebido para eliminar incertezas e maximizar o retorno criativo e comercial.
+        </p>
+</div>
+<!-- 4 Numbered Horizontal Stages -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stage 01 -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between hover:bg-surface-container transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ETAPA 01</span>
+<span class="font-headline-sm text-headline-sm text-secondary">01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">DESCOBERTA</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Compreensão profunda da marca, do mercado, concorrência, dores do utilizador e objectivos comerciais críticos.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<span class="font-label-technical text-label-technical text-outline uppercase">PESQUISA &amp; AUDITORIA</span>
+</div>
+</div>
+<!-- Stage 02 -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between hover:bg-surface-container transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ETAPA 02</span>
+<span class="font-headline-sm text-headline-sm text-secondary">02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">ESTRATÉGIA</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Definição clara do rumo estratégico, arquitectura de marca, posicionamento e roadmaps de engenharia.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<span class="font-label-technical text-label-technical text-outline uppercase">FUNDAÇÃO &amp; PLANO</span>
+</div>
+</div>
+<!-- Stage 03 -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between hover:bg-surface-container transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ETAPA 03</span>
+<span class="font-headline-sm text-headline-sm text-secondary">03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">CRIAÇÃO</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Materialização da estratégia em direcção de arte singular, protótipos de alta precisão e código robusto.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<span class="font-label-technical text-label-technical text-outline uppercase">DESIGN &amp; DESENVOLVIMENTO</span>
+</div>
+</div>
+<!-- Stage 04 -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between hover:bg-surface-container transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ETAPA 04</span>
+<span class="font-headline-sm text-headline-sm text-primary-container">04</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">ENTREGA</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Implementação, lançamento no mercado, monitorização com métricas em tempo real e optimização contínua.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">LANÇAMENTO &amp; ITERAÇÃO</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 08 — OUR CLIENTS (BRANDS THAT TRUST OUR WORK)
+       ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-lg gap-space-sm">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-1">// 07 — ECOSSISTEMA DE CLIENTES</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-primary">MARCAS QUE CONFIAM NO NOSSO TRABALHO</h2>
+</div>
+<p class="font-body-sm text-body-sm text-secondary max-w-sm">
+          Construímos relações profissionais sólidas através da criatividade, colaboração constante e compromisso absoluto.
+        </p>
+</div>
+<!-- Monochromatic Client Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm pt-space-md">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="font-headline-sm text-headline-sm text-secondary hover:text-primary transition-colors tracking-tighter">VODACOM</span>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="font-headline-sm text-headline-sm text-secondary hover:text-primary transition-colors tracking-tighter">STANDARD BANK</span>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="font-headline-sm text-headline-sm text-secondary hover:text-primary transition-colors tracking-tighter">BTM CORRIDOR</span>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="font-headline-sm text-headline-sm text-secondary hover:text-primary transition-colors tracking-tighter">MOZA BANCO</span>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="font-headline-sm text-headline-sm text-secondary hover:text-primary transition-colors tracking-tighter">TDM TELECOM</span>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="font-headline-sm text-headline-sm text-secondary hover:text-primary transition-colors tracking-tighter">HEINEKEN MZ</span>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 09 & 10 — NUMBERS & TRUST (METRICS & TESTIMONIALS)
+       ========================================================================= -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<!-- Metrics Strip -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-2xl">
+<div class="bg-surface-container-low p-space-lg">
+<span class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary font-bold block mb-1">85+</span>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-wider block">PROJECTOS ENTREGUES</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Em fintech, retalho, hospitalidade e telecomunicações.</p>
+</div>
+<div class="bg-surface-container-low p-space-lg">
+<span class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary font-bold block mb-1">12+</span>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-wider block">MERCADOS IMPACTADOS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">África Austral, África Ocidental e Europa Lusófona.</p>
+</div>
+<div class="bg-surface-container-low p-space-lg">
+<span class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary-container font-bold block mb-1">100%</span>
+<span class="font-label-technical text-label-technical text-outline uppercase tracking-wider block">EQUIPA INTERNA DE ELITE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Equipa interna de criativos, engenheiros e estrategas.</p>
+</div>
+<div class="bg-surface-container-low p-space-lg">
+<span class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary font-bold block mb-1">03</span>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-wider block">PILARES INTEGRADOS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Marketing, Publicidade e Programação em total simbiose.</p>
+</div>
+</div>
+<!-- Testimonials / Voices of Trust -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<div class="bg-surface-container p-space-xl flex flex-col justify-between shadow-md">
+<div class="mb-space-lg">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-space-sm">format_quote</span>
+<p class="font-body-lg text-body-lg text-primary italic leading-relaxed">
+              "A DigitAfrika redefiniu completamente a nossa presença no ecossistema digital. A união entre a visão estética contemporânea e a arquitetura técnica impecável colocou a nossa plataforma num patamar de liderança regional incontestado."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-md bg-surface-container-high/40 p-space-sm">
+<div class="w-10 h-10 bg-surface-bright flex items-center justify-center text-primary font-headline-sm text-headline-sm">AM</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Anísio Machava</h4>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Director de Inovação Digital, Kuvula Capital</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-xl flex flex-col justify-between shadow-md">
+<div class="mb-space-lg">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-space-sm">format_quote</span>
+<p class="font-body-lg text-body-lg text-primary italic leading-relaxed">
+              "Trabalhar com a equipa da DigitAfrika é ter a certeza de que não teremos mais uma campanha genérica. A profundidade cultural que eles trazem para a direção de arte e branding é inigualável no mercado africano."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-md bg-surface-container-high/40 p-space-sm">
+<div class="w-10 h-10 bg-surface-bright flex items-center justify-center text-primary font-headline-sm text-headline-sm">ST</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Samira Tavares</h4>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Directora de Marca, Lumen Group</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 11 — CONTACT CTA: "LET'S CREATE WHAT'S NEXT."
+       ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-2xl" id="contact">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Editorial Column (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-sm">// 08 — ENTRE EM CONTACTO</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase text-primary tracking-tight leading-[0.92] mb-space-md">
+              VAMOS CRIAR <br>
+<span class="text-primary-container">O QUE VEM A SEGUIR.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed mb-space-xl">
+              Tem uma ideia, um desafio complexo ou um projecto ambicioso em mente? Vamos conversar e traçar os novos caminhos do seu crescimento.
+            </p>
+<div class="space-y-space-md text-on-surface-variant font-body-md text-body-md">
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Sede Principal</span>
+<p class="text-primary">Av. Julius Nyerere, Polana Cimento, Maputo [CAT]</p>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Endereço de E-mail</span>
+<p class="text-primary hover:text-primary-container transition-colors">hello@digitafrika.com</p>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">WhatsApp Prioritário</span>
+<p class="text-primary">+258 84 000 0000</p>
+</div>
+</div>
+</div>
+<div class="pt-space-xl">
+<div class="flex items-center gap-space-xs text-primary-container font-label-technical text-label-technical uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_10px_#bef500]"></span>
+<span class="">DISPONIBILIDADE ATUAL: PROJECTOS ABERTOS PARA 2026</span>
+</div>
+</div>
+</div>
+<!-- Right Interactive Form Column (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg lg:p-space-xl shadow-2xl">
+<form class="space-y-space-lg" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso para a DigitAfrika!');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-technical text-label-technical text-secondary uppercase tracking-wider mb-2">Nome Completo *</label>
+<input class="w-full bg-surface-container-highest px-4 py-3.5 text-primary placeholder-on-surface-variant font-body-md text-body-md focus:bg-surface-bright focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="ex. Aníbal Sitoe" required="" type="text">
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-secondary uppercase tracking-wider mb-2">Empresa / Organização</label>
+<input class="w-full bg-surface-container-highest px-4 py-3.5 text-primary placeholder-on-surface-variant font-body-md text-body-md focus:bg-surface-bright focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="ex. Standard Bank MZ" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-technical text-label-technical text-secondary uppercase tracking-wider mb-2">Endereço de E-mail *</label>
+<input class="w-full bg-surface-container-highest px-4 py-3.5 text-primary placeholder-on-surface-variant font-body-md text-body-md focus:bg-surface-bright focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="seu@email.com" required="" type="email">
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-secondary uppercase tracking-wider mb-2">Telefone / WhatsApp *</label>
+<input class="w-full bg-surface-container-highest px-4 py-3.5 text-primary placeholder-on-surface-variant font-body-md text-body-md focus:bg-surface-bright focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="+258 84 000 0000" required="" type="tel">
+</div>
+</div>
+<!-- Service Interest Selector -->
+<div>
+<label class="block font-label-technical text-label-technical text-secondary uppercase tracking-wider mb-3">Áreas de Interesse *</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs" id="service-pills">
+<button class="py-2.5 px-3 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase text-center hover:bg-surface-bright transition-colors focus:bg-primary-container focus:text-on-primary-fixed" type="button">MARKETING</button>
+<button class="py-2.5 px-3 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase text-center hover:bg-surface-bright transition-colors focus:bg-primary-container focus:text-on-primary-fixed" type="button">PUBLICIDADE</button>
+<button class="py-2.5 px-3 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase text-center hover:bg-surface-bright transition-colors focus:bg-primary-container focus:text-on-primary-fixed" type="button">PROGRAMAÇÃO</button>
+<button class="py-2.5 px-3 bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical uppercase text-center hover:bg-surface-bright transition-colors focus:bg-primary-container focus:text-on-primary-fixed" type="button">INTEGRADO 360°</button>
+</div>
+</div>
+<!-- Project Vision / Details -->
+<div>
+<label class="block font-label-technical text-label-technical text-secondary uppercase tracking-wider mb-2">Visão do Projecto / Desafio</label>
+<textarea class="w-full bg-surface-container-highest px-4 py-3.5 text-primary placeholder-on-surface-variant font-body-md text-body-md focus:bg-surface-bright focus:outline-none focus:ring-1 focus:ring-primary-container transition-all resize-none" placeholder="Descreva brevemente a sua ideia, metas pretendidas e prazos estimados..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-5 bg-primary-container text-on-primary-fixed font-label-lg text-label-lg uppercase tracking-wider hover:bg-primary hover:text-surface-container-lowest transition-all duration-200 flex items-center justify-center gap-space-xs shadow-md" type="submit">
+<span class="">INICIAR UM PROJECTO</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<!-- =========================================================================
+     FOOTER & MANIFESTO
+     ========================================================================= -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-2xl">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-space-xl pb-space-xl border-b border-outline-variant/20">
+<div class="max-w-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-sm">// MANIFESTO 01</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-primary leading-none mb-space-md">DigitAfrika.<br><span class="text-outline">Repense Tudo.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Potência Criativa &amp; Digital Independente operando a partir de Maputo, Moçambique — servindo marcas globais e regionais destemidas através de reinvenção radical.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-lg w-full lg:w-auto">
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 01 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Marketing</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Estratégia de Marca</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Posicionamento de Mercado</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Crescimento &amp; Performance</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Inteligência Cultural</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 02 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Publicidade</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Identidade Visual</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Campanhas Multicanal</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Direcção de Arte</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Motion &amp; Cinema</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 03 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Programação</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Plataformas Digitais</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Sistemas Web &amp; Mobile</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">UI/UX Empresarial</a></li>
+<li class=""><a class="hover:text-primary-container transition-colors" href="#">Arquitetura de Alta Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg border-b border-outline-variant/20 font-body-sm text-body-sm">
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Hub do Estúdio</span>
+<p class="text-on-surface">Av. Julius Nyerere, Polana Cimento<br>Maputo, Moçambique [CAT]</p>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Contacto Directo</span>
+<a class="text-primary hover:text-primary-container transition-colors block" href="mailto:hello@digitafrika.com">hello@digitafrika.com</a>
+<span class="text-on-surface-variant">+258 84 000 0000 (Linha WhatsApp)</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Estado Operacional</span>
+<div class="flex items-center gap-space-xs text-primary-container font-label-technical text-label-technical uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span class="">Disponível Para Projectos Globais</span>
+</div>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Conectar // Redes Sociais</span>
+<div class="flex items-center gap-space-md pt-1">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">X</a>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row justify-between items-center gap-space-md font-label-technical text-label-technical text-outline uppercase">
+<p class="">© 2026 DIGITAFRIKA DIGITAL LTD. TODOS OS DIREITOS RESERVADOS.</p>
+<p class="text-on-surface-variant">DESENHADO COM PRECISÃO BRUTAL &amp; ETHOS EDITORIAL AFRICANO</p>
+</div>
+</div>
+</footer>
+
+
+</body></html>

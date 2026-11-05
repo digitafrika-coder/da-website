@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#191c1c", "on-secondary-container": "#b7b9b9", "error-container": "#93000a", "on-background": "#e3e2e6", "background": "#121316", "on-tertiary-container": "#60646c", "surface-container-highest": "#343538", "tertiary-fixed": "#dfe2eb", "secondary-container": "#47494a", "on-primary": "#273500", "secondary-fixed-dim": "#c5c7c7", "secondary-fixed": "#e1e3e3", "on-error-container": "#ffdad6", "surface-container": "#1f1f23", "surface-variant": "#343538", "on-primary-container": "#536d00", "on-secondary-fixed-variant": "#454747", "surface": "#121316", "error": "#ffb4ab", "secondary": "#c5c7c7", "inverse-on-surface": "#303034", "on-surface-variant": "#c3caac", "surface-container-high": "#292a2d", "tertiary-container": "#dfe2eb", "on-primary-fixed": "#151f00", "tertiary": "#ffffff", "primary-fixed": "#bef500", "inverse-primary": "#4e6700", "outline": "#8d9479", "surface-tint": "#a6d700", "on-error": "#690005", "outline-variant": "#434933", "surface-bright": "#38393c", "on-tertiary-fixed": "#181c22", "surface-container-lowest": "#0d0e11", "primary-fixed-dim": "#a6d700", "on-primary-fixed-variant": "#3a4d00", "primary-container": "#bef500", "primary": "#ffffff", "inverse-surface": "#e3e2e6", "on-tertiary": "#2c3137", "on-surface": "#e3e2e6", "tertiary-fixed-dim": "#c3c6cf", "on-secondary": "#2e3131", "surface-container-low": "#1b1b1f", "surface-dim": "#121316", "on-tertiary-fixed-variant": "#43474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3.5rem", "gutter-desktop": "2rem", "space-xs": "0.25rem", "space-2xl": "6rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-lg": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-desktop": "4rem", "margin": "2rem", "gutter-mobile": "1rem" }, "fontFamily": { "headline-lg-mobile": ["Syne"], "headline-sm": ["Space Grotesk"], "body-md": ["Space Grotesk"], "body-lg": ["Space Grotesk"], "headline-md-mobile": ["Space Grotesk"], "headline-lg": ["Syne"], "display-xl-mobile": ["Syne"], "body-sm": ["Space Grotesk"], "display-lg-mobile": ["Syne"], "headline-md": ["Space Grotesk"], "display-lg": ["Syne"], "label-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "display-xl": ["Syne"], "label-technical": ["Space Grotesk"] }, "fontSize": { "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "headline-md-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-xl-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}], "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "display-lg": ["68px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700"}], "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600"}], "display-xl": ["96px", {"lineHeight": "96px", "letterSpacing": "-0.04em", "fontWeight": "800"}], "label-technical": ["10px", {"lineHeight": "12px", "letterSpacing": "0.18em", "fontWeight": "500"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- HEADER & FLOATING CENTRAL NAV PILL -->
+<header class="fixed top-0 w-full z-50 bg-[#0B0C0F]/90 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="h-20 max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between">
+<!-- Official Brand Logo -->
+<a class="flex items-center gap-space-xs group shrink-0" data-path="inicio" href="#">
+<img alt="DigitAfrika Logo" class="h-8 sm:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFY_EqSYk3OXk6NG8VIjGv6bxnAHEi55xvtAZ__xHqXTDW0ZW-qWVIP6WSyGtRnAlPn-igYfmewKbfSx_Et7jipWTON0UH_Y2n4yYtki8_qjOQ1g_Dn7kGN2VIMtQYHi7qQCv-1vUpqvcLZiwhoA3BPT-5ejjkf3Tc9oyS3bjFyXIuu6CNjamD5t9PzN0H9aXAC705iCkTmlOxbsSkzu5VF2guUKhObsKd_WhCswrV4K37p9EDKgC2dA"/>
+</a>
+<!-- Floating Central Navigation Bar with Dropdown -->
+<nav class="hidden xl:flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-outline-variant/40 shadow-inner" data-active-classes="text-primary-container bg-surface-container font-bold">
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="inicio" href="#">Início</a>
+<!-- Servicos Multi-Level Trigger -->
+<div class="relative group">
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all inline-flex items-center gap-1" data-path="servicos" href="#">Serviços</a>
+<div class="absolute left-0 top-full pt-3 w-56 hidden group-hover:block z-50">
+<div class="bg-surface-container-lowest border border-outline-variant/40 shadow-2xl p-2 rounded-lg flex flex-col gap-1">
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-marketing" href="#">
+<span>Marketing</span>
+<span class="font-label-technical text-label-technical text-outline">03</span>
+</a>
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-publicidade" href="#">
+<span>Publicidade</span>
+<span class="font-label-technical text-label-technical text-outline">04</span>
+</a>
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-programacao" href="#">
+<span>Programação</span>
+<span class="font-label-technical text-label-technical text-outline">05</span>
+</a>
+</div>
+</div>
+</div>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="portfolio" href="#">Portfólio</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="detalhe-projecto" href="#">Projecto [Case]</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="sobre-nos" href="#">Sobre Nós</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="contactos" href="#">Contactos</a>
+</nav>
+<!-- Right Side: Timezone Operational Badge & Brutalist CTA -->
+<div class="flex items-center gap-space-sm sm:gap-space-md">
+<div class="hidden lg:flex items-center gap-space-xs font-label-technical text-label-technical text-on-surface-variant border border-outline-variant/40 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#bef500]"></span>
+<span class="tracking-widest">MAPUTO [CAT]</span>
+</div>
+<a class="relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-surface-container-lowest transition-all shadow-[0_0_20px_rgba(190,245,0,0.3)]" data-path="contactos" href="#">
+<span>Fale Connosco</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- CASE STUDY TOP MASTHEAD & HERO -->
+<section class="relative w-full bg-surface-container-lowest -mt-20 pt-28 pb-space-xl overflow-hidden">
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="absolute top-1/4 right-[-10%] w-[600px] h-[600px] rounded-full bg-primary-container blur-[140px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[450px] h-[450px] rounded-full bg-surface-bright blur-[100px]"></div>
+</div>
+<div class="relative max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex flex-col">
+<!-- Breadcrumb Technical Eyebrow -->
+<div class="flex flex-wrap items-center gap-space-xs font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest pb-space-md">
+<span class="text-primary-container font-bold">07 // ESTUDO DE CASO</span>
+<span class="text-secondary-container">/</span>
+<span class="text-on-surface">DIGITAL &amp; ENGENHARIA</span>
+<span class="text-secondary-container">/</span>
+<span class="text-primary-container">2026</span>
+<span class="hidden sm:inline-block ml-auto text-on-surface-variant">ID: KVL-MZ-8820</span>
+</div>
+<!-- Main Project Title & Client Subline -->
+<div class="pt-space-sm pb-space-lg flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="max-w-5xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase text-primary tracking-tight font-extrabold leading-none">
+            PLATAFORMA<br/>DIGITAL KUVULA
+          </h1>
+<p class="font-headline-sm text-headline-sm uppercase text-primary-container tracking-wider mt-space-sm">
+            Consórcio Kuvula Microfinanças &amp; Pagamentos Digitais
+          </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end">
+<span class="w-3 h-3 rounded-full bg-primary-container shadow-[0_0_12px_#bef500]"></span>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface">STATUS: PRODUÇÃO ATIVA</span>
+</div>
+</div>
+<!-- Technical Metadata Bar -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-md mb-space-xl grid grid-cols-2 md:grid-cols-4 gap-space-md shadow-md">
+<div>
+<span class="font-label-technical text-label-technical uppercase text-outline block mb-1">CATEGORIA</span>
+<span class="font-headline-sm text-base text-primary font-bold">Digital &amp; FinTech</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical uppercase text-outline block mb-1">CRONOGRAMA</span>
+<span class="font-headline-sm text-base text-primary font-bold">2025 / 2026 (14 Semanas)</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical uppercase text-outline block mb-1">LOCALIZAÇÃO</span>
+<span class="font-headline-sm text-base text-primary font-bold">Moçambique (Maputo &amp; Zambézia)</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical uppercase text-outline block mb-1">SERVIÇOS ENTREGUES</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate block" title="UI/UX, React Native, Integração M-Pesa/SIMO, Backend Cloud">
+            UI/UX, React Native, M-Pesa/SIMO, Cloud
+          </span>
+</div>
+</div>
+<!-- Hero Monumental Mockup Showcase -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-2xl group">
+<div class="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="Editorial dark mode FinTech interface showcase featuring high fidelity smartphone mockup running the Kuvula banking app next to an analytical tablet dashboard on an obsidian brushed metal slab with neon lime graphical overlays and ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcmmSTLWDTD8ZIYX1jBPEr-S3sG2NUumL18BPNV16nF3Tl4PfLtvx0ZNqvUscDmfv4e5F832jEjpCDBEkxbsWio1Zzspm_oqXFZALpytjF2c19zgpD-pqQH-jwLIKoNXD5pNKkXUQenXNEIrE92tR6d6z8BMf4Qo9qt-ek96yXrPgg-9_m-vG-qxPYMRGwnydZd4fIuawbqkoLNFLMLO89xSecfxkJdVWeSKPK0XTA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-space-md left-space-md right-space-md flex flex-wrap items-center justify-between gap-space-sm pointer-events-none">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container bg-surface-container-lowest/90 px-3 py-1.5 rounded-full">
+              FIG 1.0 — ECOSSISTEMA FULLSTACK MOBILE &amp; DASHBOARD ANALÍTICO
+            </span>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-outline bg-surface-container-lowest/90 px-3 py-1.5 rounded-full">
+              LATÊNCIA: 140MS // CAT REGION
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTIONS 1 & 2: VISÃO GERAL & O DESAFIO (EDITORIAL ASYMMETRIC GRID) -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Sticky Sub-Index Sidebar -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="sticky top-28 bg-surface-container-low p-space-lg rounded-xl shadow-lg">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container mb-space-sm block">
+              // ARQUITETURA DE VALOR
+            </span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold leading-tight mb-space-md">
+              Inclusão Financeira em Escala Real.
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Em Moçambique, a velocidade da circulação de capital depende da capacidade de processar micro-transações diárias sem interrupções de telecomunicações.
+            </p>
+<div class="flex flex-col gap-space-xs font-label-technical text-label-technical text-outline uppercase">
+<div class="flex justify-between py-2 bg-surface-container px-3 rounded">
+<span>SEGMENTO</span>
+<span class="text-primary">Micro-comércio Informal</span>
+</div>
+<div class="flex justify-between py-2 bg-surface-container px-3 rounded">
+<span>MOTOR CORE</span>
+<span class="text-primary">SIMO / M-Pesa Native API</span>
+</div>
+<div class="flex justify-between py-2 bg-surface-container px-3 rounded">
+<span>CONFORMIDADE</span>
+<span class="text-primary">Banco de Moçambique</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Narrative Content Columns -->
+<div class="lg:col-span-8 flex flex-col gap-space-2xl">
+<!-- Secção 1: VISÃO GERAL -->
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-sm font-label-technical text-label-technical uppercase tracking-widest text-primary-container">
+<span>SEÇÃO 01</span>
+<span class="w-8 h-[2px] bg-primary-container"></span>
+<span>ESTRATÉGIA</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary font-bold mb-space-md">
+              Visão Geral
+            </h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-space-md">
+<p>
+                O consórcio Kuvula reuniu as maiores cooperativas de poupança comunitária (Xitique digital) e plataformas de microcrédito emergentes de Maputo e da província da Zambézia com a missão de substituir livros-caixa de papel por um motor transacional seguro, instantâneo e acessível em smartphones de entrada.
+              </p>
+<p>
+                A DigitAfrika foi incubada como parceira principal de engenharia e direcção de produto, responsável por reimaginar a experiência humana da movimentação financeira informal, integrando canais de telecomunicações já consolidados com infraestruturas bancárias de nível institucional.
+              </p>
+</div>
+<!-- In-Content Technical Pullquote -->
+<div class="mt-space-lg bg-surface-container p-space-lg rounded-xl shadow-md">
+<p class="font-headline-sm text-headline-sm text-primary italic font-semibold">
+                “A verdadeira soberania tecnológica em África não é importar soluções de Silicon Valley, mas desenhar para a realidade das redes instáveis e do fluxo diário dos nossos mercados.”
+              </p>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container mt-space-sm block">
+                — MANIFESTO DE ENGENHARIA KUVULA × DIGITAFRIKA
+              </span>
+</div>
+</div>
+<!-- Secção 2: O DESAFIO -->
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-sm font-label-technical text-label-technical uppercase tracking-widest text-primary-container">
+<span>SEÇÃO 02</span>
+<span class="w-8 h-[2px] bg-primary-container"></span>
+<span>RESTRIÇÕES &amp; RISCOS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary font-bold mb-space-md">
+              O Desafio
+            </h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-space-md mb-space-lg">
+<p>
+                O mercado apresentava três barreiras simultâneas de altíssima complexidade técnica e comportamental, exigindo soluções sem precedentes no ecossistema local:
+              </p>
+</div>
+<!-- Obstacle Matrix Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<span class="material-symbols-outlined text-primary-container text-3xl mb-space-xs">signal_cellular_nodata</span>
+<h4 class="font-headline-sm text-base text-primary uppercase font-bold mb-space-xs">Queda de Conectividade</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Áreas periféricas e corredores comerciais sofrem com latência intermitente (3G degradado e falhas súbitas de pacote de dados).
+                  </p>
+</div>
+<span class="font-label-technical text-label-technical text-outline uppercase mt-space-md">IMPACTO: FALHAS CRÍTICAS DE PAGAMENTO</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<span class="material-symbols-outlined text-primary-container text-3xl mb-space-xs">fingerprint</span>
+<h4 class="font-headline-sm text-base text-primary uppercase font-bold mb-space-xs">Fricção de Autenticação</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Comerciantes com baixa literacia digital esqueciam senhas alfanuméricas complexas, gerando bloqueios de caixa frequentes.
+                  </p>
+</div>
+<span class="font-label-technical text-label-technical text-outline uppercase mt-space-md">IMPACTO: 42% DE ABANDONO NO ONBOARDING</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<span class="material-symbols-outlined text-primary-container text-3xl mb-space-xs">shield</span>
+<h4 class="font-headline-sm text-base text-primary uppercase font-bold mb-space-xs">Crise de Confiança</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Histórico de golpes digitais por SMS gerava desconfiança visceral em relação a interfaces puramente automatizadas.
+                  </p>
+</div>
+<span class="font-label-technical text-label-technical text-outline uppercase mt-space-md">IMPACTO: RESISTÊNCIA CULTURAL À ADOÇÃO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTIONS 3 & 4: A ABORDAGEM & A SOLUÇÃO -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-2xl">
+<!-- Secção 3: A ABORDAGEM -->
+<div class="flex flex-col bg-surface-container-low p-space-xl rounded-xl shadow-xl">
+<div class="flex items-center gap-space-xs mb-space-sm font-label-technical text-label-technical uppercase tracking-widest text-primary-container">
+<span>SEÇÃO 03</span>
+<span class="w-6 h-[2px] bg-primary-container"></span>
+<span>MÉTODO COGNITIVO</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary font-bold mb-space-md">
+            A Abordagem
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg">
+            Rejeitamos o isolamento de gabinete. Durante 22 dias, a equipa da DigitAfrika realizou imersão etnográfica no Mercado Central de Maputo e nos polos agrícolas de Quelimane, registando a mecânica comportamental dos comerciantes.
+          </p>
+<div class="space-y-space-md mt-auto">
+<div class="bg-surface-container p-space-md rounded-lg flex gap-space-md items-start">
+<span class="font-headline-sm text-primary-container font-extrabold">01</span>
+<div>
+<h4 class="font-headline-sm text-base uppercase text-primary font-semibold">Pesquisa Etnográfica In Situ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Acompanhamento de 120 feirantes e gravação contextual de transações sob luz solar intensa e ruído acústico elevado.
+                </p>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex gap-space-md items-start">
+<span class="font-headline-sm text-primary-container font-extrabold">02</span>
+<div>
+<h4 class="font-headline-sm text-base uppercase text-primary font-semibold">Arquitetura Offline-First &amp; P2P</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Conceção de uma fila criptografada em SQLite local que assina tokens de autorização sem necessidade de handshake em tempo real com a nuvem.
+                </p>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex gap-space-md items-start">
+<span class="font-headline-sm text-primary-container font-extrabold">03</span>
+<div>
+<h4 class="font-headline-sm text-base uppercase text-primary font-semibold">Prototipagem Ágil com Usuários Reais</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Sprints de teste semanais com dispositivos de tela de 5 polegadas e brilho reduzido para validar tamanho de tipografia e contrastes ópticos.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secção 4: A SOLUÇÃO -->
+<div class="flex flex-col bg-surface-container-low p-space-xl rounded-xl shadow-xl">
+<div class="flex items-center gap-space-xs mb-space-sm font-label-technical text-label-technical uppercase tracking-widest text-primary-container">
+<span>SEÇÃO 04</span>
+<span class="w-6 h-[2px] bg-primary-container"></span>
+<span>PRODUTO ENTREGUE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary font-bold mb-space-md">
+            A Solução
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg">
+            Um ecossistema unificado composto por um app móvel ultra-leve (11MB em React Native otimizado) e um backoffice de gestão de liquidez em tempo real para bancos liquidatários.
+          </p>
+<!-- Interactive Feature List -->
+<div class="space-y-space-md mt-auto">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-base uppercase text-primary font-bold">Checkout em 2 Toques</h4>
+<span class="font-label-technical text-label-technical text-primary-container">UI RADICAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Eliminação de 7 etapas burocráticas tradicionais. Escaneamento por QR dinâmico gerado offline com confirmação biométrica háptica instantânea.
+              </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-base uppercase text-primary font-bold">Ponte Híbrida SIMO / M-Pesa</h4>
+<span class="font-label-technical text-label-technical text-primary-container">BACKEND CORE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Roteador de micro-transações com fallback automático: se a API direta do SIMO oscilar, a transação converte via USSD/STK Push sem falha perceptível.
+              </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-base uppercase text-primary font-bold">Microssegurança Físico-Digital</h4>
+<span class="font-label-technical text-label-technical text-primary-container">ZERO-TRUST</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Enclave criptográfico no telemóvel associado ao IMEI do aparelho e padrão de pressão táctil para prevenção instantânea de fraudes de troca de SIM.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GALERIA VISUAL DO PROJECTO (3 FIDELITY SHOWCASES) -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-space-xl gap-space-md">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container block mb-space-xs">
+            // DOCUMENTAÇÃO VISUAL &amp; SISTEMA
+          </span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary font-bold">
+            Galeria do Sistema
+          </h2>
+</div>
+<div class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">
+          3 ARTEFACTOS ARQUITETURAIS // DESIGN ATIVO
+        </div>
+</div>
+<!-- Bento Visual Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Artefacto 1: Aplicação Mobile (Vertical Dominant) -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col group">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up product photography of a smartphone display demonstrating the Kuvula mobile microfinance interface in dark mode with luminous lime green balance badges and clean minimal typography designed for African merchants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjhuLz95Y5OZ9uAeALDzSCDQ-snFoHR58CRhCQ6DzL5-QMoySClSiXPYWIe7y5ZwCmwgsHbvKkkVj5OR7hqwIkboiVL0-KF0eIfQwi9ahDe4m5NvEBAlmOLC86-vyx685VPSo0MdhalwbnSr3fNAzrL1q5IlXKj9SP8dKuLSGsSlH8qOqGHZZv21k8bj5B0aF6FXZlaFZiXwd343ru7OzcwP0xo3pq5Gadegvois2n"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container mb-1 block">ARTEFACTO 01</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mb-2">Aplicação Móvel React Native</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Fluxo de liquidação instantânea otimizado para operação com apenas uma mão durante o atendimento de banca.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-outline font-label-technical text-label-technical">
+<span>DEVICE: ANDROID 11+</span>
+<span>PESO: 11.2 MB</span>
+</div>
+</div>
+</div>
+<!-- Artefacto 2: Painel Web Administrativo -->
+<div class="md:col-span-8 flex flex-col gap-space-lg">
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col group">
+<div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Wide high angle render of the Kuvula central web operational dashboard displayed on a dual monitor workstation featuring dark analytical charts, real time Maputo settlement telemetry, and live liquidity nodes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxvMSvfpI0F4jU3kOosQ_5zh-hONUKqjm11G0EkvqbvhrK3SwmFpgkcXQiurpT4ypjWBbzboKR5882D8lWu3tYjMoECQNQMlY9Q4OK8DiJquH7sWG_usV4BgPU-hBbdVsJ6dInLW2lOb2i8K-UDnDgkC6yEa-WNVe75aLLh6I38zcld8u8mpsbJCQ5uc9KnqvDzWMHl0KdZsCPBNSCBeQ5dorQyny_EM1P9S8hZJ6E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container mb-1 block">ARTEFACTO 02</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mb-2">Painel de Controlo &amp; Liquidação Central</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Dashboard de observabilidade para gerentes de cooperativa monitorarem conciliação bancária, volume de depósitos e taxas de inadimplência em tempo real.
+                </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-outline font-label-technical text-label-technical">
+<span>STACK: NEXT.JS // GO MICROSERVICES</span>
+<span>CONCORRÊNCIA: 50.000 TPS</span>
+</div>
+</div>
+</div>
+<!-- Artefacto 3: Design System & Tokens -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col md:flex-row group">
+<div class="relative w-full md:w-1/2 aspect-video md:aspect-auto overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Technical design system board showing typographic scales, color tokens, button states in electric lime and obsidian dark theme, and vector component specs for the Kuvula digital platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAovMoAUt_H9nwIGJe4ER0CNCZ9VpL7Nr727iqmfJelmXCMKfAmrSTuS4Sk5v6OU9K11pSCS4X3xXPyTGEPBS2zxF_ouYcqrJPEHTlcC_OGbl0d72FvpYKJbtY592jzhXFKeIp-Mr2VNNvgxhwuFlU1t0FuNWi5G1V_7_kizHp2NOsWKiN1udOTbHBtans4I4B-9EPtnnXwcoq-iCAmyK2hO6LlsyR1D2z5gIWykxR"/>
+</div>
+<div class="p-space-md md:w-1/2 flex flex-col justify-between">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container mb-1 block">ARTEFACTO 03</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mb-2">Kuvula Core Design System</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Biblioteca de componentes tokenizada para React Native e Web, garantindo coerência visual e conformidade WCAG AAA de alto contraste em luz solar direta.
+                </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-outline font-label-technical text-label-technical">
+<span>TOKENS: 140+</span>
+<span>ACCESSIBILITY: WCAG 2.1 AAA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTÇÃO 5: RESULTADOS & IMPACTO (METRICS ENGINE WITH SVG DATA VIZ) -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-2xl gap-space-lg">
+<div class="max-w-3xl">
+<div class="flex items-center gap-space-xs mb-space-sm font-label-technical text-label-technical uppercase tracking-widest text-primary-container">
+<span>SEÇÃO 05</span>
+<span class="w-8 h-[2px] bg-primary-container"></span>
+<span>DESEMPENHO AUDITADO</span>
+</div>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg uppercase text-primary font-extrabold leading-none">
+            Resultados &amp;<br/>Impacto Real
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Métricas consolidadas após 90 dias de operações em ambiente de produção contínua, certificadas pelos relatórios operacionais do consórcio.
+        </p>
+</div>
+<!-- High-Impact 3 Metric Monoliths -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg mb-space-2xl">
+<!-- Métrica 1 -->
+<div class="bg-surface-container-low p-space-xl rounded-xl shadow-xl flex flex-col justify-between group hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-outline">// MÉTRICA 01</span>
+<span class="material-symbols-outlined text-primary-container text-2xl">trending_up</span>
+</div>
+<div class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary font-extrabold leading-none tracking-tight">
+              +68<span class="text-primary-container">%</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mt-space-md mb-space-xs">
+              Aumento na Adoção
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Taxa de adesão orgânica de comerciantes nos primeiros 90 dias após o rollout de campo em Maputo e Quelimane.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md bg-surface-container-lowest/50 p-space-sm rounded">
+<!-- Inline SVG Sparkline -->
+<svg class="w-full h-12 text-primary-container" fill="none" preserveaspectratio="none" viewbox="0 0 300 50">
+<path d="M0,45 L40,40 L80,38 L120,28 L160,30 L200,18 L240,12 L300,4" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,45 L40,40 L80,38 L120,28 L160,30 L200,18 L240,12 L300,4 L300,50 L0,50 Z" fill="currentColor" fill-opacity="0.1"></path>
+</svg>
+<div class="flex justify-between font-label-technical text-label-technical text-outline mt-1">
+<span>DIA 01: 1.2K USUÁRIOS</span>
+<span class="text-primary-container">DIA 90: 28.4K USUÁRIOS</span>
+</div>
+</div>
+</div>
+<!-- Métrica 2 -->
+<div class="bg-surface-container-low p-space-xl rounded-xl shadow-xl flex flex-col justify-between group hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-outline">// MÉTRICA 02</span>
+<span class="material-symbols-outlined text-primary-container text-2xl">bolt</span>
+</div>
+<div class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary font-extrabold leading-none tracking-tight">
+              &lt;1.2<span class="text-primary-container">s</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mt-space-md mb-space-xs">
+              Conclusão de Transação
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Tempo médio de processamento ponta a ponta desde o escaneamento do QR até a notificação bancária de liquidação.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md bg-surface-container-lowest/50 p-space-sm rounded">
+<!-- Progress Ring Comparison -->
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</div>
+<div class="flex flex-col font-label-technical text-label-technical">
+<span class="text-primary">BENCHMARK ANTERIOR: 8.6S</span>
+<span class="text-primary-container font-bold">REDUÇÃO DE LATÊNCIA: -86%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Métrica 3 -->
+<div class="bg-surface-container-low p-space-xl rounded-xl shadow-xl flex flex-col justify-between group hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-outline">// MÉTRICA 03</span>
+<span class="material-symbols-outlined text-primary-container text-2xl">verified</span>
+</div>
+<div class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary font-extrabold leading-none tracking-tight">
+              99.98<span class="text-primary-container">%</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mt-space-md mb-space-xs">
+              Disponibilidade Core
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Uptime contínuo sustentado pelo cluster multi-região da nuvem com suporte a chaveamento offline em nós regionais.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md bg-surface-container-lowest/50 p-space-sm rounded">
+<!-- Technical Status Ribbon -->
+<div class="flex items-center justify-between font-label-technical text-label-technical">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span class="text-on-surface">ZERO DOWNTIME NÃO PROGRAMADO</span>
+</div>
+<span class="text-outline">SLA NÍVEL TIER 4</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTÇÃO 6: PROJECTOS RELACIONADOS -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-space-xl gap-space-md">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container block mb-space-xs">
+            // ARQUIVO SELECIONADO
+          </span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary font-bold">
+            Projectos Relacionados
+          </h2>
+</div>
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors" data-path="portfolio" href="#">
+<span>Explorar Todo o Portfólio</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Related 1: Rebrand Lumen -->
+<a class="group bg-surface-container-low rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-1 duration-300 block" data-path="detalhe-projecto" href="#">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial visual identity mockup for Lumen Energy featuring minimalist brutalist solar hardware branding, typography poster guidelines, and futuristic stationery on a dark basalt textured background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgRmwpn7hai0qV853SbahLuQHMR10YE9C4a2h5sYxZNzujlP6CuqKONSJlLTdNXneV61oPlXJQ89udaOjdbAVeloYe1eV0tQ5aGentQTAk7t0PD2hXN5ZP6N8PLvlepTW8estJrxgwT0h7KfFtz6pdIpx7myuBqjE7EchDyl1uWxbnBU7CeNcBhtCjTWBTB5fFKRC7KSYdyCD-VWtDsVeqn3hHi6bfeEMjg4ccPvG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-md left-space-md">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface bg-surface-container-lowest/90 px-3 py-1.5 rounded-full">
+                06 // IDENTIDADE &amp; MARCA
+              </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">ENERGIA RENOVÁVEL · 2025</span>
+<span class="material-symbols-outlined text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">north_east</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold group-hover:text-primary-container transition-colors mb-space-xs">
+              Rebrand Lumen África
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Reposicionamento cultural e nova arquitetura de marca pan-africana para o maior operador independente de energia solar descentralizada de Moçambique.
+            </p>
+</div>
+</a>
+<!-- Related 2: Voda Commerce -->
+<a class="group bg-surface-container-low rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-1 duration-300 block" data-path="detalhe-projecto" href="#">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern dark mode e-commerce application design on a laptop and mobile screen mockup showcasing enterprise retail logistics for Voda Commerce with sleek neon lime navigation accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEyWpw6SoFYHAIJyeaGTFv0fHC15VUHMbceiH0ngJyxsf2S8ip8EYw8cdWkAfPMYqlU5nFuzDgPkDovliISNUzL2I8FuxjTrMn4ga5W9LR116w9hjDJq70lU5yDic5gk_vP0RcAHJx1Rj9VoJCzNR8ed3miQsJlr1j2hNAKDR2a09-lJS4RagTpTZazgpe6x_tKUWizD8yKovVsHCqQTeCX6BRWL8LnYVJleJoBsVQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-md left-space-md">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface bg-surface-container-lowest/90 px-3 py-1.5 rounded-full">
+                05 // ENGENHARIA DE SOFTWARE
+              </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">RETAIL &amp; LOGÍSTICA · 2025</span>
+<span class="material-symbols-outlined text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">north_east</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold group-hover:text-primary-container transition-colors mb-space-xs">
+              Voda Commerce Core
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Plataforma omnicanal B2B de compras atacadistas com catálogo sincronizado offline e rastreamento rodoviário de frotas em tempo real.
+            </p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- CTA FINAL: CALL TO ACTION SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-2xl relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary-container/10 rounded-full blur-[160px] pointer-events-none"></div>
+<div class="relative max-w-[1200px] mx-auto px-margin-mobile md:px-margin text-center flex flex-col items-center">
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary-container block mb-space-sm">
+        // INICIE O PRÓXIMO CAPÍTULO
+      </span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg uppercase text-primary font-extrabold tracking-tight max-w-4xl mb-space-md">
+        Tem uma visão semelhante para a sua marca? Vamos construí-la juntos.
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl">
+        Conectamos estratégia radical, design editorial de classe mundial e arquitetura de software resiliente a partir de Maputo para empresas globais.
+      </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-on-primary-fixed font-headline-sm text-base uppercase font-bold tracking-wider rounded-none hover:bg-primary transition-colors shadow-[0_0_30px_rgba(190,245,0,0.35)]" data-path="contactos" href="#">
+<span>Iniciar um Projecto</span>
+<span class="material-symbols-outlined text-lg">north_east</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-surface-container-high text-primary font-headline-sm text-base uppercase font-bold tracking-wider hover:bg-surface-container-highest transition-colors" data-path="portfolio" href="#">
+<span>Ver Outros Estudos de Caso</span>
+<span class="material-symbols-outlined text-lg">arrow_downward</span>
+</a>
+</div>
+<!-- Quick Agency Contact Line -->
+<div class="mt-space-xl pt-space-md flex flex-wrap justify-center items-center gap-space-lg font-label-technical text-label-technical text-outline uppercase">
+<span>RESPOSTA EM ATÉ 24H ÚTEIS</span>
+<span>•</span>
+<span>MAPUTO [CAT] // DISPONÍVEL GLOBALMENTE</span>
+<span>•</span>
+<a class="text-primary hover:text-primary-container transition-colors" href="mailto:hello@digitafrika.com">HELLO@DIGITAFRIKA.COM</a>
+</div>
+</div>
+</section>
+</div></main>
+<!-- MULTI-COLUMN FOOTER & DIRECTORY -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-2xl">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-space-xl pb-space-xl border-b border-outline-variant/20">
+<div class="max-w-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-sm">// ARCHITECTURE 01</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-primary leading-none mb-space-md">DigitAfrika.<br/><span class="text-outline">Radical &amp; Precision.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Vanguarda Criativa &amp; Engenharia de Software operando a partir de Maputo, Moçambique — servindo marcas pan-africanas e globais com arquitectura de alto impacto.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-lg w-full lg:w-auto">
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 03 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Marketing</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Estratégia de Marca</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Posicionamento Cultural</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Performance &amp; Escala</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Consultoria Analítica</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 04 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Publicidade</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Identidade Visual Brutal</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Campanhas Multicanal</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Direcção Criativa &amp; Arte</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Motion &amp; 3D Design</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 05 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Programação</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Plataformas Web Core</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Sistemas Cloud &amp; Mobile</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Design Systems UI/UX</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Arquitetura Empresarial</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg border-b border-outline-variant/20 font-body-sm text-body-sm">
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Hub Principal // Maputo</span>
+<p class="text-on-surface">Av. Julius Nyerere, Polana Cimento<br/>Maputo, Moçambique [CAT]</p>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Contacto Directo</span>
+<a class="text-primary hover:text-primary-container transition-colors block" href="mailto:hello@digitafrika.com">hello@digitafrika.com</a>
+<span class="text-on-surface-variant">+258 84 000 0000 (Linha WhatsApp)</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Disponibilidade Global</span>
+<div class="flex items-center gap-space-xs text-primary-container font-label-technical text-label-technical uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span>Disponível Para Novos Projectos</span>
+</div>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Canais Digitais</span>
+<div class="flex items-center gap-space-md pt-1">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">GitHub</a>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row justify-between items-center gap-space-md font-label-technical text-label-technical text-outline uppercase">
+<p>© 2026 DIGITAFRIKA DIGITAL LTD. TODOS OS DIREITOS RESERVADOS.</p>
+<p class="text-on-surface-variant">MAPUTO — RADICAL PAN-AFRICAN CREATIVE &amp; TECH MATRIX</p>
+</div>
+</div>
+</footer>
+</body></html>

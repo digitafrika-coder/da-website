@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#191c1c", "on-secondary-container": "#b7b9b9", "error-container": "#93000a", "on-background": "#e3e2e6", "background": "#121316", "on-tertiary-container": "#60646c", "surface-container-highest": "#343538", "tertiary-fixed": "#dfe2eb", "secondary-container": "#47494a", "on-primary": "#273500", "secondary-fixed-dim": "#c5c7c7", "secondary-fixed": "#e1e3e3", "on-error-container": "#ffdad6", "surface-container": "#1f1f23", "surface-variant": "#343538", "on-primary-container": "#536d00", "on-secondary-fixed-variant": "#454747", "surface": "#121316", "error": "#ffb4ab", "secondary": "#c5c7c7", "inverse-on-surface": "#303034", "on-surface-variant": "#c3caac", "surface-container-high": "#292a2d", "tertiary-container": "#dfe2eb", "on-primary-fixed": "#151f00", "tertiary": "#ffffff", "primary-fixed": "#bef500", "inverse-primary": "#4e6700", "outline": "#8d9479", "surface-tint": "#a6d700", "on-error": "#690005", "outline-variant": "#434933", "surface-bright": "#38393c", "on-tertiary-fixed": "#181c22", "surface-container-lowest": "#0d0e11", "primary-fixed-dim": "#a6d700", "on-primary-fixed-variant": "#3a4d00", "primary-container": "#bef500", "primary": "#ffffff", "inverse-surface": "#e3e2e6", "on-tertiary": "#2c3137", "on-surface": "#e3e2e6", "tertiary-fixed-dim": "#c3c6cf", "on-secondary": "#2e3131", "surface-container-low": "#1b1b1f", "surface-dim": "#121316", "on-tertiary-fixed-variant": "#43474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3.5rem", "gutter-desktop": "2rem", "space-xs": "0.25rem", "space-2xl": "6rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-lg": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-desktop": "4rem", "margin": "2rem", "gutter-mobile": "1rem" }, "fontFamily": { "headline-lg-mobile": ["Syne"], "headline-sm": ["Space Grotesk"], "body-md": ["Space Grotesk"], "body-lg": ["Space Grotesk"], "headline-md-mobile": ["Space Grotesk"], "headline-lg": ["Syne"], "display-xl-mobile": ["Syne"], "body-sm": ["Space Grotesk"], "display-lg-mobile": ["Syne"], "headline-md": ["Space Grotesk"], "display-lg": ["Syne"], "label-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "display-xl": ["Syne"], "label-technical": ["Space Grotesk"] }, "fontSize": { "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "headline-md-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-xl-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}], "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "display-lg": ["68px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700"}], "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600"}], "display-xl": ["96px", {"lineHeight": "96px", "letterSpacing": "-0.04em", "fontWeight": "800"}], "label-technical": ["10px", {"lineHeight": "12px", "letterSpacing": "0.18em", "fontWeight": "500"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- HEADER & FLOATING CENTRAL NAV PILL -->
+<header class="fixed top-0 w-full z-50 bg-[#0B0C0F]/90 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="h-20 max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between">
+<!-- Official Brand Logo -->
+<a class="flex items-center gap-space-xs group shrink-0" data-path="inicio" href="#">
+<img alt="DigitAfrika Logo" class="h-8 sm:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFY_EqSYk3OXk6NG8VIjGv6bxnAHEi55xvtAZ__xHqXTDW0ZW-qWVIP6WSyGtRnAlPn-igYfmewKbfSx_Et7jipWTON0UH_Y2n4yYtki8_qjOQ1g_Dn7kGN2VIMtQYHi7qQCv-1vUpqvcLZiwhoA3BPT-5ejjkf3Tc9oyS3bjFyXIuu6CNjamD5t9PzN0H9aXAC705iCkTmlOxbsSkzu5VF2guUKhObsKd_WhCswrV4K37p9EDKgC2dA"/>
+</a>
+<!-- Floating Central Navigation Bar with Dropdown -->
+<nav class="hidden xl:flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-outline-variant/40 shadow-inner" data-active-classes="text-primary-container bg-surface-container font-bold">
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="inicio" href="#">Início</a>
+<!-- Servicos Multi-Level Trigger -->
+<div class="relative group">
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all inline-flex items-center gap-1" data-path="servicos" href="#">Serviços</a>
+<div class="absolute left-0 top-full pt-3 w-56 hidden group-hover:block z-50">
+<div class="bg-surface-container-lowest border border-outline-variant/40 shadow-2xl p-2 rounded-lg flex flex-col gap-1">
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-marketing" href="#">
+<span>Marketing</span>
+<span class="font-label-technical text-label-technical text-outline">03</span>
+</a>
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-publicidade" href="#">
+<span>Publicidade</span>
+<span class="font-label-technical text-label-technical text-outline">04</span>
+</a>
+<a class="px-3 py-2 text-on-surface-variant hover:text-primary-container hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-between" data-path="servicos-programacao" href="#">
+<span>Programação</span>
+<span class="font-label-technical text-label-technical text-outline">05</span>
+</a>
+</div>
+</div>
+</div>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="portfolio" href="#">Portfólio</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="detalhe-projecto" href="#">Projecto [Case]</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="sobre-nos" href="#">Sobre Nós</a>
+<a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-lg text-label-lg uppercase tracking-wider transition-all" data-path="contactos" href="#">Contactos</a>
+</nav>
+<!-- Right Side: Timezone Operational Badge & Brutalist CTA -->
+<div class="flex items-center gap-space-sm sm:gap-space-md">
+<div class="hidden lg:flex items-center gap-space-xs font-label-technical text-label-technical text-on-surface-variant border border-outline-variant/40 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#bef500]"></span>
+<span class="tracking-widest">MAPUTO [CAT]</span>
+</div>
+<a class="relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-surface-container-lowest transition-all shadow-[0_0_20px_rgba(190,245,0,0.3)]" data-path="contactos" href="#">
+<span>Fale Connosco</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 01: HERO MANIFESTO -->
+<section class="relative w-full bg-surface-container-lowest px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl overflow-hidden">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-space-lg">
+<!-- Eyebrow & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-technical text-label-technical uppercase tracking-widest text-primary-container">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>08 // MANIFESTO &amp; IDENTIDADE</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-3 py-1 text-on-surface-variant font-label-technical text-label-technical tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#bef500]"></span>
+<span>EST. 2021 — MAPUTO, MOÇAMBIQUE</span>
+</div>
+</div>
+<!-- Main Headline Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end pt-space-sm">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<h1 class="font-display-lg text-display-lg-mobile md:text-headline-lg lg:text-display-lg uppercase tracking-tight text-primary leading-none">
+            UM MUNDO DE POSSIBILIDADES.<br/>
+<span class="text-outline">UMA AGÊNCIA INDEPENDENTE.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface max-w-3xl leading-relaxed">
+            Nascemos em Maputo para desafiar as abordagens convencionais da comunicação, publicidade e tecnologia em África e no mundo. Sem intermediários, sem ruído corporativo: puro músculo estratégico e inovação radical.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between gap-space-md bg-surface-container p-space-md shadow-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">// VETOR INSTITUCIONAL</span>
+<span class="material-symbols-outlined text-primary-container">polyline</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Construímos sistemas digitais, campanhas omnicanal e narrativas de marca desenhadas com precisão matemática e vitalidade estética afro-contemporânea.
+          </p>
+<div class="flex items-center gap-space-xs pt-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span>Matriz Operacional</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Atmospheric Hero Visual Panel -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md pt-space-lg">
+<div class="md:col-span-8 relative h-[360px] md:h-[480px] overflow-hidden bg-surface-container-high shadow-xl">
+<img class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700" data-alt="Avant-garde architectural design studio in Maputo Mozambique with dark concrete walls, high ceilings, warm dramatic neon rim lights, African digital artists and software engineers collaborating on ultra-wide glowing monitors, brutalist precision aesthetic with obsidian black and lime green accents, cinematic documentary photography 8k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgBfJIHZoWC3ZsYLOIDSm6J90bAOHFeBt3joqmH33qdzFEPSx6i-gfqweP3LNzqaJECA0lKXfrNCWrg00J-NEnFqFb0Z8S4bnBx9yLwhQEsJdviGIEjIeUFIwHLhqFsAxBxRl6XWUfmykiC-ys6Pr3cCxRUYYjcwOXH9n8r9TT0qaUXfeBDh1N_qmfFhT7IWGDYkiurvrYLII7LZU18JAssjtEF4sP8XkLwJ6cdOn9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent flex flex-col justify-end p-space-md md:p-space-lg">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">// COORDENADA: -25.9692° S, 32.5732° E</span>
+<p class="font-headline-sm text-headline-sm text-primary uppercase mt-1">O Estúdio de Maputo: Epicentro Criativo Pan-Africano</p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col justify-between gap-space-md bg-surface-container-low p-space-lg">
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-technical text-label-technical text-outline uppercase tracking-widest">// MÉTRICAS DE IMPACTO</span>
+<div class="space-y-space-md">
+<div>
+<span class="font-display-lg text-headline-lg text-primary block leading-none">100%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Independência Editorial e Operacional</span>
+</div>
+<div>
+<span class="font-display-lg text-headline-lg text-primary-container block leading-none">12+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Mercados Africanos e Globais Alcançados</span>
+</div>
+<div>
+<span class="font-display-lg text-headline-lg text-primary block leading-none">99.98%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Disponibilidade e Resiliência de Código</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm flex items-center justify-between text-on-surface font-label-technical text-label-technical uppercase">
+<span>SISTEMA REGISTRADO</span>
+<span class="text-primary-container font-bold">DIGIT_CORE_v2.6</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: A FILOSOFIA // REPENSAR O ÓBVIO -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="max-w-[1600px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Sticky Typography Column -->
+<div class="lg:col-span-5 flex flex-col gap-space-md lg:sticky lg:top-28">
+<div class="flex items-center gap-space-xs font-label-technical text-label-technical text-primary-container uppercase tracking-widest">
+<span>// 01. NÚCLEO FILOSÓFICO</span>
+</div>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg uppercase tracking-tight text-primary leading-tight">
+            REPENSAR<br/>
+<span class="text-primary-container">O ÓBVIO.</span>
+</h2>
+<div class="w-16 h-1 bg-primary-container mt-2"></div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-space-xs">
+            Acreditamos que a criatividade africana contemporânea não precisa de validação externa nem de mimetismos superficiais. Quando ancorada em arquitectura técnica rigorosa, torna-se uma das forças culturais e de negócio mais magnéticas do planeta.
+          </p>
+<div class="p-space-md bg-surface-container-high mt-space-sm">
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">AXIOMA DIGITAFRIKA</span>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "A verdadeira vanguarda não segue templates corporativos. Ela desmantela os consensos ultrapassados para erigir novos padrões de utilidade e fascínio."
+            </p>
+</div>
+</div>
+<!-- Right Manifesto Extended Narrative -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="bg-surface-container-low p-space-lg flex flex-col gap-space-md shadow-xl">
+<span class="font-label-technical text-label-technical text-outline uppercase tracking-widest">// O PROBLEMA COM O STATUS QUO</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary">A Fadiga do Mimetismo Digital</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Durante anos, as marcas e corporações em África foram forçadas a escolher entre dois extremos frustrantes: grandes agências multinacionais ancoradas em burocracias pesadas e templates ocidentais descontextualizados, ou pequenos fornecedores fragmentados incapazes de sustentar infraestruturas digitais de escala crítica.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Recusamos essa dicotomia. A DigitAfrika nasceu como um estúdio de acção directa: arquitectos, estrategas e engenheiros que dialogam à mesa sem barreiras burocráticas, fundindo o dinamismo cultural de Moçambique com a excelência técnica exigida pelos maiores mercados do mundo.
+            </p>
+</div>
+<!-- Secondary Image Anchor -->
+<div class="relative h-[280px] bg-surface-container overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Macro view of a custom code editor showing clean futuristic algorithmic scripts overlaid with vibrant abstract African textile geometry patterns, dark mode aesthetic, neon lime syntax highlights on pure basalt black background, cinematic graphic design composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNiPGgaZLg14yqrGf3uoigJkMG64uZ9N8LzXlOL-BMwpPsFcWgexauOOGOI-vir9P8IvZt--DXpWWbVRjtHqUn61-CSfh_PohbiT_4lWciK1IcPLj6mxo9DMj-eT8t7tN7JXnjdM0osDULXkE37zbDpb-JqdEhN3RTq8U_KiIa4IoISn61ouZSCsLn9OzL-P1ar-gaT-22YRXGwJbR7WiCEvuTL17hUiYyg5g76yVV"/>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-3 py-1 font-label-technical text-label-technical text-primary uppercase">
+              SÍNTESE // CÓDIGO FONTE &amp; IDENTIDADE CULTURAL
+            </div>
+</div>
+<div class="bg-surface-container-low p-space-lg flex flex-col gap-space-md shadow-xl">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">// A RESPOSTA DIGITAFRIKA</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Engenharia de Impacto Descomunal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Não fazemos comunicação para preencher calendários vazios de redes sociais nem escrevemos software descartável. Desenvolvemos ecossistemas que geram tração imediata, fidelização irrevogável e rentabilidade demonstrável para clientes ambiciosos.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="p-space-sm bg-surface-container">
+<span class="material-symbols-outlined text-primary-container mb-1">offline_bolt</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-1">Velocidade Direta</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linha direta entre os criadores e os decisores da sua organização. Sem filtros esterilizantes.</p>
+</div>
+<div class="p-space-sm bg-surface-container">
+<span class="material-symbols-outlined text-primary-container mb-1">hub</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-1">Visão Integrada</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Design, publicidade e backend nascem do mesmo plano director estratégico.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: POSICIONAMENTO // DUPLO PILAR ESTRATÉGICO -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 02. ARQUITETURA DE VALOR</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">O NOSSO POSICIONAMENTO</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          A convergência singular entre independência radical e alcance continental sem concessões à mediocridade.
+        </p>
+</div>
+<!-- Bento Grid de Posicionamento -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Bloco 1: Agência Independente -->
+<div class="bg-surface-container p-space-xl flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ESTRUTURA INDEPENDENTE</span>
+<span class="font-headline-sm text-headline-sm text-outline font-bold">01</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary leading-tight">
+              AGÊNCIA CRIATIVA &amp; DIGITAL INDEPENDENTE
+            </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Sem redes corporativas multinacionais a ditar prioridades ou impor fórmulas pré-fabricadas. A nossa fidelidade é exclusivamente com o projeto, com a eficácia do resultado e com a criação de relevância tangível.
+            </p>
+<div class="space-y-space-xs pt-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>Zero camadas burocráticas intermediárias e tomada de decisão ágil.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>Alocação directa de seniores em todos os projectos estratégicos.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>Liberdade para inovar em formatos e linguagens proprietárias.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl pt-space-md flex items-center justify-between text-on-surface-variant font-label-technical text-label-technical uppercase">
+<span>MODELO: BOUTIQUE DE ALTA ENERGIA</span>
+<span class="material-symbols-outlined text-primary-container">lock_open</span>
+</div>
+</div>
+<!-- Bloco 2: Raízes Locais, Padrões Globais -->
+<div class="bg-surface-container-high p-space-xl flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">ALCANCE &amp; ORIGEM</span>
+<span class="font-headline-sm text-headline-sm text-outline font-bold">02</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary leading-tight">
+              RAÍZES LOCAIS, PADRÕES GLOBAIS
+            </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Operamos a partir de Maputo, no cruzamento entre as dinâmicas pulsantes da África Austral e os mais exigentes parâmetros internacionais de qualidade tecnológica e direcção artística.
+            </p>
+<div class="space-y-space-xs pt-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>Compreensão granular dos mercados da CPLP e África Subsahariana.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>Padrões de engenharia em conformidade com normas globais (ISO, OWASP).</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>Polinização de ideias locais exportadas para contextos mundiais.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl pt-space-md flex items-center justify-between text-on-surface-variant font-label-technical text-label-technical uppercase">
+<span>ESCALA: PAN-AFRICANA &amp; DIÁSPORA</span>
+<span class="material-symbols-outlined text-primary-container">public</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: OS 4 PILARES DA ABORDAGEM DIGITAFRIKA -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">// 03. O NOSSO CÓDIGO METODOLÓGICO</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">OS 4 PILARES DA ABORDAGEM</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Princípios inegociáveis que regem cada estratégia de marca, cada campanha publicitária e cada sprint de software que concebemos.
+        </p>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pilar 1 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors duration-300 shadow-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-technical text-label-technical text-primary-container uppercase font-bold">PILAR // 01</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary leading-snug">
+              Rigor Estratégico
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Nenhuma linha de design ou código sem fundamentação em dados e contexto comercial real. O visual bonito sem fundamentação económica é apenas decoração fútil.
+            </p>
+</div>
+<div class="pt-space-md font-label-technical text-label-technical text-outline uppercase flex items-center gap-1">
+<span>MÉTRICA DE DECISÃO</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</div>
+</div>
+<!-- Pilar 2 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors duration-300 shadow-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-technical text-label-technical text-primary-container uppercase font-bold">PILAR // 02</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">fingerprint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary leading-snug">
+              Autenticidade Radical
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Não copiamos tendências ocidentais genéricas; traduzimos a identidade contemporânea com sofisticação e irreverência. A nossa assinatura é inconfundível.
+            </p>
+</div>
+<div class="pt-space-md font-label-technical text-label-technical text-outline uppercase flex items-center gap-1">
+<span>IDENTIDADE PRÓPRIA</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</div>
+</div>
+<!-- Pilar 3 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors duration-300 shadow-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-technical text-label-technical text-primary-container uppercase font-bold">PILAR // 03</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">terminal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary leading-snug">
+              Excelência em Engenharia
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Software robusto e resiliente que não quebra sob escala ou pressão repentina de tráfego. Escrevemos código limpo, documentado e pronto para o crescimento contínuo.
+            </p>
+</div>
+<div class="pt-space-md font-label-technical text-label-technical text-outline uppercase flex items-center gap-1">
+<span>RESILIÊNCIA NATIVA</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</div>
+</div>
+<!-- Pilar 4 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors duration-300 shadow-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-technical text-label-technical text-primary-container uppercase font-bold">PILAR // 04</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">update</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary leading-snug">
+              Compromisso com o Futuro
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Desenhar experiências duradouras que constroem relevância ao longo de anos, e não modismos efémeros que caducam no trimestre seguinte.
+            </p>
+</div>
+<div class="pt-space-md font-label-technical text-label-technical text-outline uppercase flex items-center gap-1">
+<span>LONGEVIDADE OPERACIONAL</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: ÁREAS DE FOCO & MATRIZ DE DISCIPLINAS (DIAGRAMA SINTÉTICO) -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-xs">// 04. TOPOGRAFIA OPERACIONAL</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">ÁREAS DE FOCO &amp; DISCIPLINAS</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          O diagrama sintético de convergência entre os três motores fundamentais da DigitAfrika.
+        </p>
+</div>
+<!-- Diagrama Sintético Tripartido com SVG Central -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Painel Esquerdo: Marketing & Publicidade -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">PILARES DE DISPONIBILIDADE</span>
+<span class="font-label-technical text-label-technical text-outline">DISC.01</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Marketing Estratégico</h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• Posicionamento de Marca Pan-Africana</li>
+<li>• Análise de Comportamento do Consumidor</li>
+<li>• Estratégia de Conteúdo e Influência</li>
+<li>• Growth Hacking &amp; Funis de Aquisição</li>
+</ul>
+</div>
+<div class="bg-surface-container p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">PILARES DE DISPONIBILIDADE</span>
+<span class="font-label-technical text-label-technical text-outline">DISC.02</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Publicidade &amp; Criação</h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• Identidades Visuais Neo-Brutalistas</li>
+<li>• Campanhas 360° Omnicanal</li>
+<li>• Direcção de Arte &amp; Redação Publicitária</li>
+<li>• Produção Audiovisual e Motion 3D</li>
+</ul>
+</div>
+</div>
+<!-- Centro: Diagrama SVG de Intersecção Sinérgica -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center p-space-lg bg-surface-container-low min-h-[380px] shadow-xl">
+<div class="relative w-full max-w-[280px] aspect-square flex items-center justify-center">
+<!-- Inline SVG Diagram representing synergistic node intersections -->
+<svg class="w-full h-full text-outline" fill="none" viewbox="0 0 200 200">
+<!-- Triângulo de Ligação -->
+<polygon fill="none" opacity="0.4" points="100,25 175,155 25,155" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<!-- Nó Marketing -->
+<circle cx="100" cy="25" fill="#1f1f23" r="16" stroke="#bef500" stroke-width="2"></circle>
+<text fill="#bef500" font-family="Space Grotesk" font-size="7" font-weight="bold" text-anchor="middle" x="100" y="28">MKT</text>
+<!-- Nó Publicidade -->
+<circle cx="175" cy="155" fill="#1f1f23" r="16" stroke="#e3e2e6" stroke-width="2"></circle>
+<text fill="#e3e2e6" font-family="Space Grotesk" font-size="7" font-weight="bold" text-anchor="middle" x="175" y="158">PUB</text>
+<!-- Nó Programação -->
+<circle cx="25" cy="155" fill="#1f1f23" r="16" stroke="#e3e2e6" stroke-width="2"></circle>
+<text fill="#e3e2e6" font-family="Space Grotesk" font-size="7" font-weight="bold" text-anchor="middle" x="25" y="158">DEV</text>
+<!-- Epicentro Núcleo DigitAfrika -->
+<circle cx="100" cy="112" fill="#bef500" r="28"></circle>
+<text fill="#151f00" font-family="Syne" font-size="8" font-weight="800" text-anchor="middle" x="100" y="110">DIGIT</text>
+<text fill="#151f00" font-family="Space Grotesk" font-size="6" font-weight="600" text-anchor="middle" x="100" y="120">AFRIKA</text>
+<!-- Conexões Centrais -->
+<line stroke="#bef500" stroke-width="1.5" x1="100" x2="100" y1="41" y2="84"></line>
+<line stroke="#bef500" stroke-width="1.5" x1="161" x2="124" y1="145" y2="122"></line>
+<line stroke="#bef500" stroke-width="1.5" x1="39" x2="76" y1="145" y2="122"></line>
+</svg>
+</div>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest mt-space-sm text-center">
+            CONVERGÊNCIA TRÍPLICE
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-center max-w-xs mt-1">
+            A intersecção onde a imaginação crua encontra a robustez do software executável.
+          </span>
+</div>
+<!-- Painel Direito: Engenharia & Sistemas -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">PILARES DE DISPONIBILIDADE</span>
+<span class="font-label-technical text-label-technical text-outline">DISC.03</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Engenharia de Software</h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• Plataformas Web de Alto Rendimento</li>
+<li>• Aplicações Móveis e PWAs</li>
+<li>• Arquiteturas Cloud &amp; Microsserviços</li>
+<li>• APIs RESTful, GraphQL &amp; Integrações</li>
+</ul>
+</div>
+<div class="bg-surface-container p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase">PILARES DE DISPONIBILIDADE</span>
+<span class="font-label-technical text-label-technical text-outline">DISC.04</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Design Systems UI/UX</h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• Interfaces Digitais Complexas</li>
+<li>• Bibliotecas de Componentes Modulares</li>
+<li>• Auditorias de Acessibilidade &amp; UX</li>
+<li>• Prototipagem Rápida e Validação Real</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06: INFORMAÇÃO INSTITUCIONAL & GOVERNANÇA -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest">// 05. DADOS CORPORATIVOS &amp; CONFORMIDADE</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">TRANSPARÊNCIA INSTITUCIONAL</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          A idoneidade formal que sustenta contratos com empresas multinacionais, governos e líderes de ecossistema.
+        </p>
+</div>
+<!-- Institutional Index Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">// REGISTRO CORPORATIVO</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase">Razão Social</span>
+<p class="font-body-md text-body-md text-on-surface">DigitAfrika Digital Solutions Lda.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sociedade por Quotas legalmente constituída ao abrigo da legislação de Moçambique.</p>
+</div>
+<div class="pt-space-md text-outline font-label-technical text-label-technical uppercase">
+            REGISTRO COMERCIAL: RC-MPM-2021-B-8491
+          </div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">// IDENTIFICAÇÃO FISCAL</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase">NUIT &amp; Tributação</span>
+<p class="font-body-md text-body-md text-on-surface">NUIT: 401 289 741</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conformidade fiscal integral perante a Autoridade Tributária de Moçambique (AT).</p>
+</div>
+<div class="pt-space-md text-primary-container font-label-technical text-label-technical uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>STATUS: CERTIDÃO EM DIA</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">// SEDE &amp; OPERAÇÃO</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase">Localização Física</span>
+<p class="font-body-md text-body-md text-on-surface">Av. Julius Nyerere, Polana Cimento</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maputo, Moçambique [CAT — Central Africa Time]. Operação híbrida com rede global.</p>
+</div>
+<div class="pt-space-md text-outline font-label-technical text-label-technical uppercase">
+            FUSO HORÁRIO: UTC+02:00
+          </div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">// ACREDITAÇÕES &amp; PADRÕES</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase">Engenharia e Dados</span>
+<p class="font-body-md text-body-md text-on-surface">OWASP Top 10 Compliance</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Práticas de segurança de dados alinhadas ao RGPD e aos normativos de privacidade africanos.</p>
+</div>
+<div class="pt-space-md text-primary-container font-label-technical text-label-technical uppercase">
+            AUDITORIA CONTÍNUA
+          </div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">// DIRETORIA EXECUTIVA</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase">Governança Criativa</span>
+<p class="font-body-md text-body-md text-on-surface">Liderança Própria e Plural</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Equipa multidisciplinar com experiência prévia em agências globais e scale-ups tecnológicas.</p>
+</div>
+<div class="pt-space-md text-outline font-label-technical text-label-technical uppercase">
+            100% MOÇAMBICANA &amp; INDEPENDENTE
+          </div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-technical text-outline uppercase">// POLÍTICA DE CONTRATAÇÃO</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase">Parcerias &amp; NDA</span>
+<p class="font-body-md text-body-md text-on-surface">Acordos de Confidencialidade</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Proteção rigorosa de propriedade intelectual e sigilo absoluto para clientes corporativos.</p>
+</div>
+<div class="pt-space-md text-outline font-label-technical text-label-technical uppercase">
+            PROTOCOLO JURÍDICO BLINDADO
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 07: CTA FINAL CONVOCATÓRIO -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile md:px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="max-w-[1600px] mx-auto bg-primary-container p-space-lg md:p-space-xl lg:p-space-2xl text-on-primary-fixed shadow-2xl relative overflow-hidden">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg relative z-10">
+<div class="flex flex-col gap-space-sm max-w-3xl">
+<span class="font-label-technical text-label-technical text-on-primary uppercase tracking-widest font-bold">
+            // 06. O PRÓXIMO PASSO
+          </span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg lg:text-display-lg uppercase tracking-tight text-on-primary-fixed leading-none">
+            QUER FAZER PARTE DESTA VISÃO?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-fixed/80 max-w-2xl leading-relaxed mt-2">
+            Estamos sempre à procura de líderes corporativos destemidos, fundadores de alto crescimento e marcas que se recusam a aceitar o comum. A nossa mesa de trabalho está aberta.
+          </p>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<a class="inline-flex items-center justify-center gap-2 px-8 py-5 bg-surface text-primary font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-surface-container-high transition-all shadow-xl" data-path="contactos" href="#">
+<span>Vamos Conversar</span>
+<span class="material-symbols-outlined text-xl">north_east</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-8 py-5 border border-on-primary-fixed/40 text-on-primary-fixed font-label-lg text-label-lg uppercase tracking-wider hover:bg-on-primary-fixed/10 transition-all" data-path="portfolio" href="#">
+<span>Ver Portfólio</span>
+</a>
+</div>
+</div>
+<!-- Watermark Background Decorative Typography -->
+<div class="absolute -bottom-10 -right-10 pointer-events-none select-none opacity-10">
+<span class="font-display-xl text-[180px] leading-none uppercase font-extrabold text-on-primary-fixed">AFRIKA</span>
+</div>
+</div>
+</section>
+</div></main>
+<!-- MULTI-COLUMN FOOTER & DIRECTORY -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface">
+<div class="max-w-[1600px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop py-space-2xl">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-space-xl pb-space-xl border-b border-outline-variant/20">
+<div class="max-w-md">
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-widest block mb-space-sm">// ARCHITECTURE 01</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-primary leading-none mb-space-md">DigitAfrika.<br/><span class="text-outline">Radical &amp; Precision.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Vanguarda Criativa &amp; Engenharia de Software operando a partir de Maputo, Moçambique — servindo marcas pan-africanas e globais com arquitectura de alto impacto.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-lg w-full lg:w-auto">
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 03 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Marketing</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Estratégia de Marca</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Posicionamento Cultural</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Performance &amp; Escala</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-marketing" href="#">Consultoria Analítica</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 04 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Publicidade</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Identidade Visual Brutal</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Campanhas Multicanal</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Direcção Criativa &amp; Arte</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-publicidade" href="#">Motion &amp; 3D Design</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-technical text-label-technical text-outline uppercase tracking-widest mb-space-sm">// 05 — Pilar</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md">Programação</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Plataformas Web Core</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Sistemas Cloud &amp; Mobile</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Design Systems UI/UX</a></li>
+<li><a class="hover:text-primary-container transition-colors" data-path="servicos-programacao" href="#">Arquitetura Empresarial</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg border-b border-outline-variant/20 font-body-sm text-body-sm">
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Hub Principal // Maputo</span>
+<p class="text-on-surface">Av. Julius Nyerere, Polana Cimento<br/>Maputo, Moçambique [CAT]</p>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Contacto Directo</span>
+<a class="text-primary hover:text-primary-container transition-colors block" href="mailto:hello@digitafrika.com">hello@digitafrika.com</a>
+<span class="text-on-surface-variant">+258 84 000 0000 (Linha WhatsApp)</span>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Disponibilidade Global</span>
+<div class="flex items-center gap-space-xs text-primary-container font-label-technical text-label-technical uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#bef500]"></span>
+<span>Disponível Para Novos Projectos</span>
+</div>
+</div>
+<div>
+<span class="font-label-technical text-label-technical text-outline uppercase block mb-1">Canais Digitais</span>
+<div class="flex items-center gap-space-md pt-1">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">GitHub</a>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row justify-between items-center gap-space-md font-label-technical text-label-technical text-outline uppercase">
+<p>© 2026 DIGITAFRIKA DIGITAL LTD. TODOS OS DIREITOS RESERVADOS.</p>
+<p class="text-on-surface-variant">MAPUTO — RADICAL PAN-AFRICAN CREATIVE &amp; TECH MATRIX</p>
+</div>
+</div>
+</footer>
+</body></html>
